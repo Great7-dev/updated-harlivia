@@ -1,12 +1,12 @@
-import home from "../assets/Rectangle.png";
-import home2 from "../assets/home2.png";
-import man from "../assets/Rectangle (2).png";
-import hands from "../assets/hands.png";
+import home from "../assets/view.svg";
+import home2 from "../assets/chain.svg";
+import man from "../assets/const.svg";
+import hands from "../assets/hands.svg";
 
 export default function BusinessSolutions() {
   return (
     <div className="bg-[#F7F7F7] dark:bg-black">
-      <div className="max-w-7xl mx-auto px-4 py-12 ">
+      <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Header Section */}
         <div className="text-center mb-12">
           <button className="inline-flex items-center px-4 py-2 border border-[#E8E8E8] text-[18px] leading-[24px] font-medium rounded-md text-[#333333] bg-transparent  transition-colors dark:text-white dark:border-white/20 hover:bg-[#F5F7FA] dark:hover:bg-black">
@@ -20,11 +20,11 @@ export default function BusinessSolutions() {
         </div>
 
         {/* Grid Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {/* Card 1 */}
-          <div className="bg-white p-6 rounded-lg border shadow-[0_4px_20px_0_#E2E2E240] dark:bg-[#E2E2E240]">
-            <div className=" mb-4">
-              <img src={home} alt="" />
+          <div className="bg-white p-6 rounded-lg border border-[#E2E2E240] shadow-md hover:shadow-lg dark:bg-[#E2E2E240] dark:border-white/20">
+            <div className="mb-4">
+              <img src={home} alt="End-to-end Solutions" />
             </div>
             <h3 className="text-xl font-semibold text-[#000000] mb-2">
               End-to-end Solutions
@@ -36,9 +36,9 @@ export default function BusinessSolutions() {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-white p-6 rounded-lg border shadow-[0_4px_20px_0_#E2E2E240] dark:bg-[#E2E2E240]">
+          <div className="bg-white p-6 rounded-lg border border-[#E2E2E240] shadow-md hover:shadow-lg dark:bg-[#E2E2E240] dark:border-white/20">
             <div className="mb-4">
-              <img src={home2} alt="" />
+              <img src={home2} alt="Reliable Supply Chain" />
             </div>
             <h3 className="text-xl font-semibold text-[#000000] mb-2">
               Reliable Supply Chain
@@ -50,9 +50,9 @@ export default function BusinessSolutions() {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-white p-6 rounded-lg border shadow-[0_4px_20px_0_#E2E2E240] dark:bg-[#E2E2E240]">
+          <div className="bg-white p-6 rounded-lg border border-[#E2E2E240] shadow-md hover:shadow-lg dark:bg-[#E2E2E240] dark:border-white/20">
             <div className="mb-4">
-              <img src={man} alt="" />
+              <img src={man} alt="Scalable Options" />
             </div>
             <h3 className="text-xl font-semibold text-[#000000] mb-2">
               Scalable Options
@@ -65,9 +65,9 @@ export default function BusinessSolutions() {
           </div>
 
           {/* Card 4 */}
-          <div className="bg-white p-6 rounded-lg border shadow-[0_4px_20px_0_#E2E2E240] dark:bg-[#E2E2E240]">
+          <div className="bg-white p-6 rounded-lg border border-[#E2E2E240] shadow-md hover:shadow-lg dark:bg-[#E2E2E240] dark:border-white/20">
             <div className="mb-4">
-              <img src={hands} alt="" />
+              <img src={hands} alt="Expert Financing" />
             </div>
             <h3 className="text-xl font-semibold text-[#000000] mb-2">
               Expert Financing

@@ -1,5 +1,5 @@
 import Logo from "../../assets/leave.svg";
-import Logo2 from "../../assets/quality.png";
+import Logo2 from "../../assets/quality.svg";
 import Logo3 from "../../assets/box.svg";
 import Logo4 from "../../assets/Shipping.svg";
 

@@ -1,7 +1,7 @@
 import group1 from "../assets/Group (1).png";
-import money from "../assets/Money Bag Icon (1) 1.png";
-import oilicon from "../assets/Oil Well Icon 1.png";
-import oilttruck from "../assets/Oil Truck Icon 1.png";
+import money from "../assets/money.svg";
+import oilicon from "../assets/hook.svg";
+import oilttruck from "../assets/car.svg";
 
 export default function SolarEnergySection() {
   return (

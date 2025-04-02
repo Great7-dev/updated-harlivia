@@ -1,6 +1,6 @@
-import moneyicon from "../assets/Money Bag Icon (1) 1.png";
-import oilwell from "../assets/Oil Well Icon 1.png";
-import oilcar from "../assets/Oil Truck Icon 1.png";
+import moneyicon from "../assets/money.svg";
+import oilwell from "../assets/hook.svg";
+import oilcar from "../assets/car.svg";
 import refinery from "../assets/Refinery SVG Icons 1.png";
 
 export default function OilAndGasSection() {

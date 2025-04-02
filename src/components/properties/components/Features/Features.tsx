@@ -1,4 +1,4 @@
-import banner from "../../assets/Frame 36759.png";
+import banner from "../../assets/banner.svg";
 import home1 from "../../assets/home.svg";
 import home2 from "../../assets/house.svg";
 import home3 from "../../assets/hook.svg";
@@ -25,7 +25,11 @@ export default function Features() {
         <div className="bg-[#E2E2E240] p-8 rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-between mb-12">
           <div className="flex flex-col items-start md:w-2/3">
             <div className="mb-4">
-              <img src={home3 || "/placeholder.svg"} alt="Building icon" />
+              <img
+                src={home3 || "/placeholder.svg"}
+                alt="Building icon"
+                className="w-10"
+              />
             </div>
             <div>
               <h3 className="text-xl font-semibold text-[#000000] dark:text-white">
@@ -54,7 +58,7 @@ export default function Features() {
           <div className="bg-[#E2E2E240] p-8 rounded-lg shadow-sm">
             <div className="flex flex-col items-start">
               <div className="mb-4">
-                <img src={home1} alt="" />
+                <img src={home1} alt="" className="w-10" />
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-[#000000] dark:text-white">
@@ -73,7 +77,7 @@ export default function Features() {
           <div className="bg-[#E2E2E240] p-8 rounded-lg shadow-sm">
             <div className="flex flex-col items-start">
               <div className="mb-4">
-                <img src={home2} alt="" />
+                <img src={home2} alt="" className="w-10" />
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-[#000000] dark:text-white">

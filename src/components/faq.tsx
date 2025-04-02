@@ -38,11 +38,13 @@ export default function FAQSection() {
   return (
     <div className="w-full bg-[#F7F7F7] px-4 py-12 dark:bg-black">
       <div className="container mx-auto px-4">
-        <div className="bg-white rounded-lg shadow-sm overflow-hidden dark:bg-black">
-          <div className="grid lg:grid-cols-2 items-start">
+        <div className="bg-white w-full rounded-lg shadow-sm overflow-hidden dark:bg-black h-[495px] relative">
+          {/* Set a fixed height and relative positioning for the parent container */}
+          <div className="grid lg:grid-cols-2 gap-8 items-stretch">
             {/* FAQ Section */}
-            <div className="p-8 space-y-6">
-              {/* <h2 className="text-primary text-sm font-medium">• Frequently asked questions</h2> */}
+            <div className="p-8 space-y-6 flex flex-col justify-between z-10">
+              {" "}
+              {/* Add z-10 to bring FAQ section above image */}
               <button className="flex items-center gap-2 mb-2 bg-[#F7F7F7] rounded-lg p-2 dark:bg-black">
                 <div className="w-2 h-2 rounded-full bg-[#4CAF50]"></div>
                 <h2 className="text-[#333333] text-[18px] font-semibold dark:text-white">
@@ -62,15 +64,15 @@ export default function FAQSection() {
                 ))}
               </Accordion>
             </div>
+          </div>
 
-            {/* Image Section */}
-            <div className="relative aspect-square lg:aspect-auto lg:h-full order-first lg:order-last bg-[#000000] overflow-hidden">
-              <img
-                src={Logo}
-                alt="Blue light bulb illustration"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
+          {/* Image Section */}
+          <div className="absolute right-0 top-0 h-full flex justify-end items-start">
+            <img
+              src={Logo}
+              alt="Blue light bulb illustration"
+              className="w-[450px] h-124 object-cover" // Adjust width as needed
+            />
           </div>
         </div>
       </div>
