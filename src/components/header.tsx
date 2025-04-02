@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import logo from "../assets/logo.png";
 import { ModeToggle } from "./lib/mode-toggle";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,8 +52,8 @@ export default function Header() {
               {isDropdownOpen && (
                 <div className="absolute left-0 mt-2 w-[900px] rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 dark:ring-white dark:ring-opacity-10 z-10">
                   <div className="p-4 grid grid-cols-3 gap-4">
-                    <a
-                      href="/properties"
+                    <Link
+                      to="/properties"
                       className="block p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                     >
                       <div className="flex items-center gap-3">
@@ -89,9 +90,10 @@ export default function Header() {
                           </div>
                         </div>
                       </div>
-                    </a>
-                    <a
-                      href="/cargo"
+                    </Link>
+
+                    <Link
+                      to="/cargo"
                       className="block p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                     >
                       <div className="flex items-center gap-3">
@@ -122,9 +124,10 @@ export default function Header() {
                           </div>
                         </div>
                       </div>
-                    </a>
-                    <a
-                      href="/energy"
+                    </Link>
+
+                    <Link
+                      to="/energy"
                       className="block p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                     >
                       <div className="flex items-center gap-3">
@@ -161,10 +164,11 @@ export default function Header() {
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </Link>
+
                     <div className="col-span-3">
-                      <a
-                        href="/agric"
+                      <Link
+                        to="/agric"
                         className="block p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                       >
                         <div className="flex items-center gap-3">
@@ -199,7 +203,7 @@ export default function Header() {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -283,8 +287,8 @@ export default function Header() {
 
               {isDropdownOpen && (
                 <div className="pl-4">
-                  <a
-                    href="/properties"
+                  <Link
+                    to="/properties"
                     className="block p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
                     <div className="flex items-center gap-3">
@@ -321,9 +325,10 @@ export default function Header() {
                         </div>
                       </div>
                     </div>
-                  </a>
-                  <a
-                    href="/cargo"
+                  </Link>
+
+                  <Link
+                    to="/cargo"
                     className="block p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
                     <div className="flex items-center gap-3">
@@ -354,9 +359,10 @@ export default function Header() {
                         </div>
                       </div>
                     </div>
-                  </a>
-                  <a
-                    href="/energy"
+                  </Link>
+
+                  <Link
+                    to="/energy"
                     className="block p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
                     <div className="flex items-center gap-3">
@@ -393,9 +399,10 @@ export default function Header() {
                         </div>
                       </div>
                     </div>
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+
+                  <Link
+                    to="/agric"
                     className="block p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
                     <div className="flex items-center gap-3">
@@ -430,7 +437,7 @@ export default function Header() {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
