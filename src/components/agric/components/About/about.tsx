@@ -1,62 +1,69 @@
-import Logo from "../../assets/leave.png";
+import Logo from "../../assets/leave.svg";
 import Logo2 from "../../assets/quality.png";
-import Logo3 from "../../assets/box.png";
-import Logo4 from "../../assets/Shipping.png";
+import Logo3 from "../../assets/box.svg";
+import Logo4 from "../../assets/Shipping.svg";
+
 const About = () => {
   return (
     <section className="bg-white py-16 md:py-24 dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <button className="inline-flex items-center px-4 py-2 border border-[#E8E8E8] text-[18px] leading-[24px] font-medium rounded-md text-[#333333] bg-transparent  transition-colors dark:text-white dark:border-white/20 hover:bg-[#F5F7FA] dark:hover:bg-black">
+          <button className="inline-flex items-center px-4 py-2 border border-[#E8E8E8] text-[18px] leading-[24px] font-medium rounded-md text-[#333333] bg-transparent transition-colors dark:text-white dark:border-white/20 hover:bg-[#F5F7FA] dark:hover:bg-black">
             <span className="w-2 h-2 bg-[#B4EE4C] rounded-full mr-2"></span>
             What we do
           </button>
           <p className="mt-4 text-xl md:text-2xl text-[#1A1A1A] leading-8 dark:text-white">
             We work directly with local farmers, carefully selecting and
             aggregating the best crops, fruits, and spices, ensuring they meet
-            international standards.{" "}
+            international standards.
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* We Build from the Ground Up */}
-          <div className="bg-[#E2E2E240] p-8 rounded-lg shadow-sm">
-            <div className="flex flex-col items-start">
-              <div className="mb-4">
-                <img src={Logo || "/placeholder.svg"} alt="Logo" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-[#000000] dark:text-white">
-                  {" "}
-                  Sourcing with care
-                </h3>
-                <p className="mt-2 text-[#767676] dark:text-white">
-                  We partner with dedicated farmers who take pride in what they
-                  grow. Every batch of produce is handpicked for quality,
-                  freshness, and taste.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* 100% Quality Projects */}
-          <div className="bg-[#E2E2E240] overflow-hidden">
-            <div className="relative h-full">
+        {/* Featured Card - Full Width */}
+        <div className="bg-[#E2E2E240] p-8 rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-between mb-12">
+          {/* Text Content */}
+          <div className="flex flex-col items-start md:w-2/3">
+            <div className="mb-4">
               <img
-                src={Logo2}
-                alt="Logo2"
-                className="w-full h-full object-cover"
+                src={Logo || "/placeholder.svg"}
+                alt="Logo"
+                className="w-10"
               />
             </div>
+            <div>
+              <h3 className="text-xl font-semibold text-[#000000] dark:text-white">
+                Sourcing with care
+              </h3>
+              <p className="mt-2 text-[#767676] dark:text-white">
+                We partner with dedicated farmers who take pride in what they
+                grow. Every batch of produce is handpicked for quality,
+                freshness, and taste.
+              </p>
+            </div>
           </div>
 
-          {/* We Sell Homes & Investments */}
+          {/* Image */}
+          <div className="md:w-1/2 mt-6 md:mt-0">
+            <img
+              src={Logo2}
+              alt="Logo2"
+              className="w-full h-auto object-cover rounded-lg"
+            />
+          </div>
+        </div>
+
+        {/* Additional Feature Cards */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Processing & Packaging */}
           <div className="bg-[#E2E2E240] p-8 rounded-lg shadow-sm">
             <div className="flex flex-col items-start">
               <div className="mb-4">
-                <img src={Logo3} alt="" />
+                <img
+                  src={Logo3}
+                  alt="Processing & Packaging"
+                  className="w-10"
+                />
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-[#000000] dark:text-white">
@@ -71,11 +78,15 @@ const About = () => {
             </div>
           </div>
 
-          {/* We Manage Shortlets */}
+          {/* Shipping Beyond Borders */}
           <div className="bg-[#E2E2E240] p-8 rounded-lg shadow-sm">
             <div className="flex flex-col items-start">
               <div className="mb-4">
-                <img src={Logo4} alt="Logo4" />
+                <img
+                  src={Logo4}
+                  alt="Shipping Beyond Borders"
+                  className="w-10"
+                />
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-[#000000] dark:text-white">

@@ -1,7 +1,7 @@
 import banner from "../../assets/Frame 36759.png";
-import home1 from "../../assets/House Monocolor Icon 1.png";
-import home2 from "../../assets/House Monocolor Icon (1) 1.png";
-import home3 from "../../assets/Crane Hook Monocolor 1.png";
+import home1 from "../../assets/home.svg";
+import home2 from "../../assets/house.svg";
+import home3 from "../../assets/hook.svg";
 
 export default function Features() {
   return (
@@ -21,38 +21,35 @@ export default function Features() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* We Build from the Ground Up */}
-          <div className="bg-[#E2E2E240] p-8 rounded-lg shadow-sm">
-            <div className="flex flex-col items-start">
-              <div className="mb-4">
-                <img src={home3 || "/placeholder.svg"} alt="Building icon" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-[#000000] dark:text-white">
-                  We Build from the Ground Up
-                </h3>
-                <p className="mt-2 text-gray-600 dark:text-white">
-                  We don't just resell properties that others have built, we
-                  construct them ourselves. Every brick, every fixture, and
-                  every finish is carefully thought out to ensure top-tier
-                  quality, durability, and style.
-                </p>
-              </div>
+        {/* We Build from the Ground Up */}
+        <div className="bg-[#E2E2E240] p-8 rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-between mb-12">
+          <div className="flex flex-col items-start md:w-2/3">
+            <div className="mb-4">
+              <img src={home3 || "/placeholder.svg"} alt="Building icon" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-[#000000] dark:text-white">
+                We Build from the Ground Up
+              </h3>
+              <p className="mt-2 text-gray-600 dark:text-white">
+                We don't just resell properties that others have built, we
+                construct them ourselves. Every brick, every fixture, and every
+                finish is carefully thought out to ensure top-tier quality,
+                durability, and style.
+              </p>
             </div>
           </div>
-
           {/* 100% Quality Projects */}
-          <div className="bg-[#E2E2E240] rounded-lg shadow-sm overflow-hidden">
-            <div className="relative h-full">
-              <img
-                src={banner}
-                alt="100% Quality Projects"
-                className="w-full h-full object-cover"
-              />
-            </div>
+          <div className="md:w-1/2 mt-6 md:mt-0">
+            <img
+              src={banner}
+              alt="banner"
+              className="w-full h-auto object-cover rounded-lg"
+            />
           </div>
+        </div>
 
+        <div className="grid md:grid-cols-2 gap-8">
           {/* We Sell Homes & Investments */}
           <div className="bg-[#E2E2E240] p-8 rounded-lg shadow-sm">
             <div className="flex flex-col items-start">

@@ -7,6 +7,7 @@ import Header from "./components/header";
 import HeroSection from "./components/hero";
 import { ThemeProvider } from "./components/lib/theme-provider";
 import ServiceCarousel from "./components/service-carousel";
+import Whoweare from "./components/whoweare";
 
 const Landingpage = () => {
   return (
@@ -15,6 +16,7 @@ const Landingpage = () => {
         <Header />
         <HeroSection />
         <ServiceCarousel />
+        <Whoweare />
         <BentoGrid />
         <FeaturesGrid />
         <FAQSection />
