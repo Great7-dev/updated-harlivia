@@ -27,7 +27,7 @@ export default function Hero() {
           <button className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition cursor-pointer">
             Contact Us
           </button>
-          <button className="px-5 py-2 text-black rounded-md border border-transparent hover:border-gray-400 transition cursor-pointer">
+          <button className="px-5 py-2 text-black rounded-md border border-black hover:border-gray-400 transition cursor-pointer">
             Partner with Us
           </button>
         </div>
