@@ -40,12 +40,16 @@ export default function FAQSection() {
       <div className="container mx-auto px-4">
         <div className="bg-white w-full rounded-lg shadow-sm overflow-hidden dark:bg-black min-h-[495px] flex flex-col lg:flex-row">
           {/* Image Section (Moves to top on small screens) */}
-          <div className="w-full flex justify-center items-center lg:w-1/3 lg:order-2">
-            <img src={Logo} alt="Blue light bulb illustration" />
+          <div className="w-full flex justify-center items-center lg:w-auto lg:order-2">
+            <img
+              src={Logo}
+              alt="Blue light bulb illustration"
+              className="max-w-full h-auto object-contain"
+            />
           </div>
 
-          {/* FAQ Section */}
-          <div className="p-6 lg:p-8 space-y-6 flex flex-col justify-center lg:w-2/3">
+          {/* FAQ Section (Expands Fully) */}
+          <div className="p-6 lg:p-8 space-y-6 flex flex-col justify-center lg:flex-1">
             <button className="flex items-center gap-2 mb-2 bg-[#F7F7F7] rounded-lg p-2 dark:bg-black">
               <div className="w-2 h-2 rounded-full bg-[#4CAF50]"></div>
               <h2 className="text-[#333333] text-[18px] font-semibold dark:text-white">
