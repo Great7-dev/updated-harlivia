@@ -18,7 +18,7 @@ export default function HeroSection() {
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
             <Link to="/properties">
-              <button className="px-6 py-3 rounded-md bg-[#335CFF] text-white font-medium hover:bg-[#335CFF]/90 transition-colors dark:text-white cursor-pointer">
+              <button className="px-6 py-3 rounded-md bg-[#335CFF] text-white font-medium hover:bg-[#335CFF]/90 transition-colors dark:text-white cursor-pointer w-full">
                 Explore Our Ecosystem
               </button>
             </Link>
