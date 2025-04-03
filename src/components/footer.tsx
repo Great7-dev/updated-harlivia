@@ -1,195 +1,227 @@
-const FooterSection = () => {
+import { Button } from "../components/ui/button";
+
+const Footer = () => {
   return (
-    <footer className="relative text-white py-6 px-4 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-1/2 before:h-1/3 before:bg-green-300 before:rounded-full before:blur-3xl before:opacity-50 before:-z-10 after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-1/2 after:h-1/3 after:bg-blue-300 after:rounded-full after:blur-3xl after:opacity-50 after:-z-10">
-      {/* Main content section */}
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-medium mb-4 text-black dark:text-white">
+    <footer className="relative bg-white dark:bg-gray-900 overflow-hidden">
+      <div className="relative container mx-auto px-4 pt-16 pb-8 z-10">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-[48px] font-bold mb-4 text-[#000000] dark:text-white">
             Let's Work Together!
           </h2>
-          <p className="text-[#767676] max-w-3xl mx-auto text-center dark:text-white">
+          <p className="text-black dark:text-white mb-6 text-[18px]">
             Whether you're looking for premium real estate, quality agricultural
             produce, innovative energy solutions, or reliable cargo & logistics
-            services, Hartivia is here to serve you.
+            services, Harlivia is here to serve you.
           </p>
-        </div>
-
-        <div className="flex justify-center mb-16">
-          <a
-            href="#"
-            className="bg-[#335CFF] text-white py-3 px-8 rounded-[10px] font-medium"
-          >
+          <Button className="bg-[#005FB8] hover:bg-blue-700 text-white px-8 dark:bg-blue-600 dark:hover:bg-blue-700 text-[18px]">
             Get in touch
-          </a>
+          </Button>
         </div>
-
-        <hr className="border-[#E1E4EA] mb-12" />
-
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-gray-800 font-medium uppercase text-sm mb-4 dark:text-white">
-              COMPANY
-            </h3>
-            <ul className="space-y-3">
-              <li>
+      </div>
+      {/* Gradient Background */}
+      <div className="relative">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "linear-gradient(135deg, #B4EE4C 0%, #005FB8 100%)",
+            opacity: 0.4,
+            filter: "blur(150px)",
+          }}
+        />
+        {/* Call to Action Section */}
+        {/* Keep the container relative to ensure it sits above the absolute gradient div */}
+        <div className="relative container mx-auto px-4 pt-16 pb-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-4 border-t border-gray-300 dark:border-gray-800">
+            {" "}
+            {/* Added light mode border color */}
+            {/* Company Column */}
+            <div>
+              <h3 className="text-[16px] tracking-[0.06em] mb-4 text-sm text-[#1A1A1A] dark:text-gray-400">
+                COMPANY
+              </h3>
+              <ul className="space-y-3">
+                <li>
+                  <a
+                    href="#"
+                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[24px] hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    About us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[24px] hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    Contact us
+                  </a>
+                </li>
+              </ul>
+            </div>
+            {/* What We Offer Column */}
+            <div>
+              <h3 className="text-[16px] tracking-[0.06em] mb-4 text-sm text-[#1A1A1A] dark:text-gray-400">
+                WHAT WE OFFER
+              </h3>
+              <ul className="space-y-3">
+                <li>
+                  <a
+                    href="#"
+                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[24px] hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    Properties
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[24px] hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    Agric
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[24px] hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    Cargo & Logistics
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[24px] hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    Energy
+                  </a>
+                </li>
+              </ul>
+            </div>
+            {/* Legal Column */}
+            <div>
+              <h3 className="text-[16px] tracking-[0.06em] mb-4 text-sm text-[#1A1A1A] dark:text-gray-400">
+                LEGAL
+              </h3>
+              <ul className="space-y-3">
+                <li>
+                  <a
+                    href="#"
+                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[24px] hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[24px] hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    Terms of Service
+                  </a>
+                </li>
+              </ul>
+            </div>
+            {/* Stay Connected Column */}
+            <div>
+              <h3 className="text-[16px] tracking-[0.06em] mb-4 text-sm text-[#1A1A1A] dark:text-gray-400">
+                STAY CONNECTED
+              </h3>
+              <div className="flex space-x-4">
+                {/* SVG Icons... */}
                 <a
                   href="#"
-                  className="text-[#1A1A1A] font-medium text-xl dark:text-white"
+                  className="text-[#1A1A1A] dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
                 >
-                  About us
+                  {" "}
+                  {/* Removed font-bold and text-[16px] from icon wrapper */}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-twitter"
+                  >
+                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                  </svg>
+                  <span className="sr-only">Twitter</span>
                 </a>
-              </li>
-              <li>
                 <a
                   href="#"
-                  className="text-[#1A1A1A] font-medium text-xl dark:text-white"
+                  className="text-[#1A1A1A] dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
                 >
-                  Contact us
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-linkedin"
+                  >
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect width="4" height="12" x="2" y="9" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                  <span className="sr-only">LinkedIn</span>
                 </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-gray-800 font-medium uppercase text-sm mb-4 dark:text-white">
-              WHAT WE OFFER
-            </h3>
-            <ul className="space-y-3">
-              <li>
                 <a
                   href="#"
-                  className="text-[#1A1A1A] font-medium text-xl dark:text-white"
+                  className="text-[#1A1A1A] dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
                 >
-                  Properties
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-instagram"
+                  >
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                  </svg>
+                  <span className="sr-only">Instagram</span>
                 </a>
-              </li>
-              <li>
                 <a
                   href="#"
-                  className="text-[#1A1A1A] font-medium text-xl dark:text-white"
+                  className="text-[#1A1A1A] dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
                 >
-                  Agric
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-facebook"
+                  >
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                  </svg>
+                  <span className="sr-only">Facebook</span>
                 </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-[#1A1A1A] font-medium text-xl dark:text-white"
-                >
-                  Cargo & Logistics
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-[#1A1A1A] font-medium text-xl dark:text-white"
-                >
-                  Energy
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-gray-800 font-medium uppercase text-sm mb-4 dark:text-white">
-              LEGAL
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  className="text-[#1A1A1A] font-medium text-xl dark:text-white"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-[#1A1A1A] font-medium text-xl dark:text-white"
-                >
-                  Terms of Service
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-gray-800 font-medium uppercase text-sm mb-4 dark:text-white">
-              STAY CONNECTED
-            </h3>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                aria-label="Twitter"
-                className="text-gray-600 hover:text-blue-600 dark:text-white"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="text-gray-600 hover:text-blue-600 dark:text-white"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                </svg>
-              </a>
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="text-gray-600 hover:text-blue-600 dark:text-white"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-              </a>
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="text-gray-600 hover:text-blue-600 dark:text-white"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-                </svg>
-              </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Gradient background */}
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          background: "linear-gradient(to right, #B4EE4C, #005FB8)",
-          opacity: "0.1",
-        }}
-      />
     </footer>
   );
 };
 
-export default FooterSection;
+export default Footer;

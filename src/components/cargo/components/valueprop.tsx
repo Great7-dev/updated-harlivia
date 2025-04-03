@@ -23,7 +23,7 @@ export default function ValueProposition() {
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 gap-3">
           {/* Transparent Pricing */}
-          <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md hover:shadow-lg dark:bg-[#E2E2E240]">
+          <div className="p-6 bg-white border border-gray-100 rounded-lg shadow-[0px_2px_6px_rgba(0,0,0,0.12)] transition-all dark:bg-[#E2E2E240] dark:border-gray-700 dark:shadow-[0px_2px_6px_rgba(255,255,255,0.12)]">
             <div className="flex flex-col items-start">
               <div className="mb-4">
                 <img
@@ -44,7 +44,7 @@ export default function ValueProposition() {
           </div>
 
           {/* Logistics Partner */}
-          <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md hover:shadow-lg dark:bg-[#E2E2E240]">
+          <div className="p-6 bg-white border border-gray-100 rounded-lg shadow-[0px_2px_6px_rgba(0,0,0,0.12)] transition-all dark:bg-[#E2E2E240] dark:border-gray-700 dark:shadow-[0px_2px_6px_rgba(255,255,255,0.12)]">
             <div className="flex flex-col items-start">
               <div className="mb-4">
                 <img
@@ -66,7 +66,7 @@ export default function ValueProposition() {
           </div>
 
           {/* End-to-End Shipping */}
-          <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md hover:shadow-lg dark:bg-[#E2E2E240]">
+          <div className="p-6 bg-white border border-gray-100 rounded-lg shadow-[0px_2px_6px_rgba(0,0,0,0.12)] transition-all dark:bg-[#E2E2E240] dark:border-gray-700 dark:shadow-[0px_2px_6px_rgba(255,255,255,0.12)]">
             <div className="flex flex-col items-start">
               <div className="mb-4">
                 <img src={pickup} alt="End-to-End Shipping" />
@@ -84,7 +84,7 @@ export default function ValueProposition() {
           </div>
 
           {/* Storage & Warehousing */}
-          <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md hover:shadow-lg dark:bg-[#E2E2E240]">
+          <div className="p-6 bg-white border border-gray-100 rounded-lg shadow-[0px_2px_6px_rgba(0,0,0,0.12)] transition-all dark:bg-[#E2E2E240] dark:border-gray-700 dark:shadow-[0px_2px_6px_rgba(255,255,255,0.12)]">
             <div className="flex flex-col items-start">
               <div className="mb-4">
                 <img src={storage} alt="Storage & Warehousing" />

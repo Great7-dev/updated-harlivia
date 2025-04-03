@@ -49,7 +49,7 @@ export default function ValueProposition() {
           ].map(({ logo, title, text }, index) => (
             <div
               key={index}
-              className="bg-white p-6 border border-gray-200 rounded-lg shadow-md dark:bg-[#E2E2E240] dark:border-gray-600"
+              className="p-6 bg-white border border-gray-100 rounded-lg shadow-[0px_2px_6px_rgba(0,0,0,0.12)] transition-all dark:bg-[#E2E2E240] dark:border-gray-700 dark:shadow-[0px_2px_6px_rgba(255,255,255,0.12)]"
             >
               <div className="flex flex-col items-start">
                 <div className="mb-4">

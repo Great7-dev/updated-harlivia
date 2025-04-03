@@ -21,9 +21,9 @@ const About = () => {
         </div>
 
         {/* Featured Card - Full Width */}
-        <div className="bg-[#E2E2E240] p-8 rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-between mb-12">
+        <div className="bg-[#E2E2E240] rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-between mb-12">
           {/* Text Content */}
-          <div className="flex flex-col items-start md:w-2/3">
+          <div className="flex flex-col items-start md:w-2/3 max-w-[568px] p-8">
             <div className="mb-4">
               <img
                 src={Logo || "/placeholder.svg"}
@@ -44,11 +44,11 @@ const About = () => {
           </div>
 
           {/* Image */}
-          <div className="md:w-1/2 mt-6 md:mt-0">
+          <div className="md:w-[500px] mt-6 md:mt-0">
             <img
               src={Logo2}
               alt="Logo2"
-              className="w-full h-auto object-cover rounded-lg"
+              className="w-[500px] h-auto object-cover rounded-lg"
             />
           </div>
         </div>

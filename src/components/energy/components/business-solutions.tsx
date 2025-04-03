@@ -13,7 +13,7 @@ export default function BusinessSolutions() {
             <span className="w-2 h-2 bg-[#B4EE4C] rounded-full mr-2"></span>
             Why should you trust us?
           </button>
-          <p className="text-gray-800 text-lg max-w-2xl mx-auto dark:text-white">
+          <p className="mt-4 text-gray-800 text-lg max-w-2xl mx-auto dark:text-white">
             At the end of the day, it's not just about energy—it's about keeping
             life and business moving, without unnecessary stress.
           </p>
@@ -22,7 +22,7 @@ export default function BusinessSolutions() {
         {/* Grid Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {/* Card 1 */}
-          <div className="bg-white p-6 rounded-lg border border-[#E2E2E240] shadow-md hover:shadow-lg dark:bg-[#E2E2E240] dark:border-white/20">
+          <div className="p-6 bg-white border border-gray-100 rounded-lg shadow-[0px_2px_6px_rgba(0,0,0,0.12)] transition-all dark:bg-[#E2E2E240] dark:border-gray-700 dark:shadow-[0px_2px_6px_rgba(255,255,255,0.12)]">
             <div className="mb-4">
               <img src={home} alt="End-to-end Solutions" />
             </div>
@@ -36,7 +36,7 @@ export default function BusinessSolutions() {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-white p-6 rounded-lg border border-[#E2E2E240] shadow-md hover:shadow-lg dark:bg-[#E2E2E240] dark:border-white/20">
+          <div className="p-6 bg-white border border-gray-100 rounded-lg shadow-[0px_2px_6px_rgba(0,0,0,0.12)] transition-all dark:bg-[#E2E2E240] dark:border-gray-700 dark:shadow-[0px_2px_6px_rgba(255,255,255,0.12)]">
             <div className="mb-4">
               <img src={home2} alt="Reliable Supply Chain" />
             </div>
@@ -50,7 +50,7 @@ export default function BusinessSolutions() {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-white p-6 rounded-lg border border-[#E2E2E240] shadow-md hover:shadow-lg dark:bg-[#E2E2E240] dark:border-white/20">
+          <div className="p-6 bg-white border border-gray-100 rounded-lg shadow-[0px_2px_6px_rgba(0,0,0,0.12)] transition-all dark:bg-[#E2E2E240] dark:border-gray-700 dark:shadow-[0px_2px_6px_rgba(255,255,255,0.12)]">
             <div className="mb-4">
               <img src={man} alt="Scalable Options" />
             </div>
@@ -65,7 +65,7 @@ export default function BusinessSolutions() {
           </div>
 
           {/* Card 4 */}
-          <div className="bg-white p-6 rounded-lg border border-[#E2E2E240] shadow-md hover:shadow-lg dark:bg-[#E2E2E240] dark:border-white/20">
+          <div className="p-6 bg-white border border-gray-100 rounded-lg shadow-[0px_2px_6px_rgba(0,0,0,0.12)] transition-all dark:bg-[#E2E2E240] dark:border-gray-700 dark:shadow-[0px_2px_6px_rgba(255,255,255,0.12)]">
             <div className="mb-4">
               <img src={hands} alt="Expert Financing" />
             </div>

@@ -22,8 +22,8 @@ export default function Features() {
 
         {/* Features Grid */}
         {/* We Build from the Ground Up */}
-        <div className="bg-[#E2E2E240] p-8 rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-between mb-12">
-          <div className="flex flex-col items-start md:w-2/3">
+        <div className="bg-[#E2E2E240] rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-between mb-12">
+          <div className="flex flex-col items-start md:w-2/3 max-w-[568px] p-8">
             <div className="mb-4">
               <img
                 src={home3 || "/placeholder.svg"}
@@ -35,7 +35,7 @@ export default function Features() {
               <h3 className="text-xl font-semibold text-[#000000] dark:text-white">
                 We Build from the Ground Up
               </h3>
-              <p className="mt-2 text-gray-600 dark:text-white">
+              <p className="mt-2 text-gray-600 dark:text-white leading-relaxed">
                 We don't just resell properties that others have built, we
                 construct them ourselves. Every brick, every fixture, and every
                 finish is carefully thought out to ensure top-tier quality,
@@ -44,11 +44,11 @@ export default function Features() {
             </div>
           </div>
           {/* 100% Quality Projects */}
-          <div className="md:w-1/2 mt-6 md:mt-0">
+          <div className="md:w-[500px] mt-6 md:mt-0">
             <img
               src={banner}
               alt="banner"
-              className="w-full h-auto object-cover rounded-lg"
+              className="w-[500px] h-auto object-cover rounded-lg"
             />
           </div>
         </div>

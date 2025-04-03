@@ -10,7 +10,7 @@ import agric from "../assets/agric.png";
 
 const BentoGrid = () => {
   return (
-    <section className="w-full py-12 bg-[#F7F7F7] dark:bg-black">
+    <section className="w-full py-[56px] bg-[#F7F7F7] dark:bg-black">
       <div className="container mx-auto px-4">
         {/* Header Text */}
         <div className="text-center mb-8">
@@ -18,7 +18,7 @@ const BentoGrid = () => {
             <span className="w-2 h-2 bg-[#B4EE4C] rounded-full mr-2"></span>
             What we have to offer
           </button>
-          <p className="text-gray-800 dark:text-gray-200 max-w-3xl mx-auto text-sm md:text-base">
+          <p className="mt-4 text-[24px] text-gray-800 dark:text-gray-200 max-w-4xl mx-auto text-sm">
             Whether it's bringing joy through good food, helping you find the
             perfect home, powering communities with sustainable energy and
             affordable metering solutions, or getting your goods where they need

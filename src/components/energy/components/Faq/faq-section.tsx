@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../ui/accordion";
+} from "../../components/ui/accordion";
 import Logo from "../../../../assets/bluebulb.svg";
 
 export default function FAQSection() {
@@ -38,31 +38,35 @@ export default function FAQSection() {
   return (
     <div className="w-full bg-[#F7F7F7] px-4 py-12 dark:bg-black">
       <div className="container mx-auto px-4">
-        <div className="bg-white w-full rounded-lg shadow-sm overflow-hidden dark:bg-black min-h-[495px] flex flex-col lg:flex-row">
-          {/* Image Section (Moves to top on small screens) */}
-          <div className="w-full flex justify-center items-center lg:w-auto lg:order-2">
-            <img
-              src={Logo}
-              alt="Blue light bulb illustration"
-              className="max-w-full h-auto object-contain"
-            />
-          </div>
-
-          {/* FAQ Section (Expands Fully) */}
-          <div className="p-6 lg:p-8 space-y-6 flex flex-col justify-center lg:flex-1">
-            <button className="flex items-center gap-2 mb-2 bg-[#F7F7F7] rounded-lg p-2 dark:bg-black">
+        <div className="bg-white w-full rounded-lg shadow-sm overflow-hidden dark:bg-black min-h-[495px] flex flex-col lg:flex-row relative">
+          {/* Button (Inline on Mobile, Absolute on Larger Screens) */}
+          <div className="w-full flex justify-start lg:absolute lg:top-6 lg:left-6">
+            <button className="flex items-center gap-2 bg-[#F7F7F7] rounded-lg px-4 py-2 dark:bg-black">
               <div className="w-2 h-2 rounded-full bg-[#4CAF50]"></div>
-              <h2 className="text-[#333333] text-[18px] font-semibold dark:text-white">
+              <h2 className="text-[#333333] text-sm md:text-base lg:text-lg font-semibold dark:text-white">
                 Frequently Asked Questions
               </h2>
             </button>
+          </div>
+
+          {/* Image Section (Centers on Mobile, Moves Right on Larger Screens) */}
+          <div className="w-full flex justify-center items-center lg:w-auto lg:order-2 mt-6 lg:mt-0">
+            <img
+              src={Logo}
+              alt="Blue light bulb illustration"
+              className="max-w-[80%] sm:max-w-[60%] lg:max-w-full h-auto object-contain"
+            />
+          </div>
+
+          {/* FAQ Section (Spacing Adjusted for Mobile) */}
+          <div className="px-4 lg:p-8 flex flex-col justify-center lg:flex-1 space-y-6 mt-6 lg:mt-14">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="text-left text-[#000000] font-medium dark:text-white">
+                  <AccordionTrigger className="text-left text-[#000000] font-medium dark:text-white text-sm md:text-base lg:text-lg">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-[#767676] font-light dark:text-white">
+                  <AccordionContent className="text-[#767676] font-light dark:text-white text-xs md:text-sm lg:text-base">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
