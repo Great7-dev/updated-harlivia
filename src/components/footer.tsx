@@ -43,7 +43,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[24px] hover:text-blue-600 dark:hover:text-blue-400"
+                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     About us
                   </a>
@@ -51,7 +51,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[24px] hover:text-blue-600 dark:hover:text-blue-400"
+                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     Contact us
                   </a>
@@ -67,7 +67,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[24px] hover:text-blue-600 dark:hover:text-blue-400"
+                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     Properties
                   </a>
@@ -75,7 +75,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[24px] hover:text-blue-600 dark:hover:text-blue-400"
+                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     Agric
                   </a>
@@ -83,7 +83,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[24px] hover:text-blue-600 dark:hover:text-blue-400"
+                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     Cargo & Logistics
                   </a>
@@ -91,7 +91,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[24px] hover:text-blue-600 dark:hover:text-blue-400"
+                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     Energy
                   </a>
@@ -107,7 +107,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[24px] hover:text-blue-600 dark:hover:text-blue-400"
+                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     Privacy Policy
                   </a>
@@ -115,7 +115,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[24px] hover:text-blue-600 dark:hover:text-blue-400"
+                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     Terms of Service
                   </a>
