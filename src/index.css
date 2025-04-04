@@ -122,3 +122,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplay-Mediu.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/NeueHaas/NeueHaasDisplay-Mediu.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
