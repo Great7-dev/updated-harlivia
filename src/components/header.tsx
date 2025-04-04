@@ -32,8 +32,8 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="w-full border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 z-[50] sticky top-0">
-      <div className="px-4 sm:px-6 lg:px-8">
+    <header className="w-full border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 z-[50] sticky top-0 m-0">
+      <div className="px-4 sm:px-6 lg:px-8 m-0">
         <div className="flex h-16 items-center">
           {/* Logo */}
           <div className="flex-shrink-0 mr-2">
