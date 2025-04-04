@@ -74,7 +74,7 @@ const FeaturesGrid = () => {
                     className="w-12 h-16"
                   />
                 </div>
-                <h3 className="text-[24px] font-bold mb-2 text-black dark:text-white">
+                <h3 className="text-[24px] font-medium mb-2 text-black dark:text-white">
                   {feature.title}
                 </h3>
                 <p className="text-[16px] font-medium text-[#767676] dark:text-white">
@@ -100,7 +100,7 @@ const FeaturesGrid = () => {
                     className="w-12 h-16"
                   />
                 </div>
-                <h3 className="text-[24px] font-bold mb-2 text-black dark:text-white">
+                <h3 className="text-[24px] font-medium mb-2 text-black dark:text-white">
                   {feature.title}
                 </h3>
                 <p className="text-[16px] font-medium text-[#767676] dark:text-white">

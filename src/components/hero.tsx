@@ -6,7 +6,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
         <div className="flex flex-col items-center text-center space-y-6">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black leading-tight dark:text-white font-neue">
-            Building Better Lives Through Innovation, Excellence, and Impact.
+            Building Better Lives Through <br /> Innovation, Excellence, and Impact.
           </h1>
 
           <p className="text-sm md:text-base text-[#767676] max-w-3xl dark:text-white font-neue">
