@@ -48,7 +48,7 @@ export default function Features() {
         </div>
 
         {/* We Sell Homes & Investments */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-[12px]">
           <div className="bg-[#E2E2E240] p-8 rounded-lg shadow-sm">
             <div className="flex flex-col items-start">
               <div className="mb-4">
