@@ -1,8 +1,159 @@
+/** @format */
+
 @import "tailwindcss";
 
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Neue Haas Display";
+}
+
+/* Neue Haas Display Font Family */
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplayXXThin.ttf")
+    format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplayXXThinItalic.ttf")
+    format("truetype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplayXThin.ttf")
+    format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplayXThinItalic.ttf")
+    format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplayThin.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplayThinItalic.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplayLight.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplayLightItalic.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplayRoman.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplayRomanItalic.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplayMediu.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplayMediumItalic.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplayBold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplayBoldItalic.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplayBlack.ttf")
+    format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplayBlackItalic.ttf")
+    format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
 
 :root {
   --background: oklch(1 0 0);
@@ -123,7 +274,7 @@
   }
 }
 
-@font-face {
+/* @font-face {
   font-family: "Neue Haas Grotesk Display Pro";
   src: url("/src/assets/fonts/NeueHaas/NeueHaasDisplay-Mediu.woff2")
       format("woff2"),
@@ -131,4 +282,4 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-}
+} */
