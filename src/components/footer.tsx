@@ -1,4 +1,5 @@
 import { Button } from "../components/ui/button";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -65,36 +66,36 @@ const Footer = () => {
               </h3>
               <ul className="space-y-3">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/properties"
                     className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     Properties
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/agric"
                     className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     Agric
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/cargo"
                     className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     Cargo & Logistics
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/energy"
                     className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     Energy
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
