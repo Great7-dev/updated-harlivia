@@ -44,7 +44,7 @@ const About = () => {
           </div>
 
           {/* Image */}
-          <div className="md:w-[500px] p-8">
+          <div className="md:w-[500px] p-[8px]">
             <img
               src={Logo2}
               alt="Logo2"

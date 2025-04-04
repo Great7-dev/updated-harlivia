@@ -44,7 +44,7 @@ export default function Features() {
             </div>
           </div>
           {/* 100% Quality Projects */}
-          <div className="md:w-[500px] p-8 md:mt-0">
+          <div className="md:w-[500px] p-[8px] md:mt-0">
             <img
               src={banner}
               alt="banner"
