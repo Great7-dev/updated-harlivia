@@ -9,7 +9,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <button className="inline-flex items-center px-4 py-2 border border-[#E8E8E8] text-[18px] leading-[24px] font-medium rounded-md text-[#333333] bg-transparent transition-colors dark:text-white dark:border-white/20 hover:bg-[#F5F7FA] dark:hover:bg-black">
+          <button className="inline-flex items-center px-4 py-2 border border-[#E8E8E8] bg-[#F5F5F5] text-[18px] leading-[24px] font-medium rounded-md text-[#333333] transition-colors dark:text-white dark:border-white/20 hover:bg-[#F5F7FA] dark:hover:bg-black">
             <span className="w-2 h-2 bg-[#B4EE4C] rounded-full mr-2"></span>
             What we do
           </button>
@@ -21,7 +21,7 @@ const About = () => {
         </div>
 
         {/* Featured Card - Full Width */}
-        <div className="bg-[#E2E2E240] rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-between mb-12">
+        <div className="bg-[#E2E2E240] rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-between mb-3">
           {/* Text Content */}
           <div className="flex flex-col items-start md:w-2/3 max-w-[568px] p-8">
             <div className="mb-4">
@@ -44,7 +44,7 @@ const About = () => {
           </div>
 
           {/* Image */}
-          <div className="md:w-[500px] mt-6 md:mt-0">
+          <div className="md:w-[500px] p-8">
             <img
               src={Logo2}
               alt="Logo2"

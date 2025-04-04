@@ -16,18 +16,17 @@ const Hero = () => {
           Delivering the Finest in Quality,
         </h1>
         <h1 className="text-4xl font-bold mb-4">Flavour, and Satisfaction</h1>
-        <p className="text-lg mb-4 max-w-2xl">
+        <p className="text-lg mb-4">
           Africa grows some of the richest, most flavorful produce, but it often
-          goes unnoticed globally.
+          goes unnoticed globally. <br />
+          We're here to change that.
         </p>
-        <p className="text-lg mb-6">We're here to change that.</p>
-
         {/* Buttons */}
         <div className="flex space-x-4">
           <button className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition cursor-pointer">
             Contact Us
           </button>
-          <button className="px-5 py-2 text-black rounded-md border border-black hover:border-gray-400 transition cursor-pointer">
+          <button className="px-5 py-2 text-black rounded-md border bg-[#F5F5F5] hover:border-gray-400 transition cursor-pointer">
             Partner with Us
           </button>
         </div>

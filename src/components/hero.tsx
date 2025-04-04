@@ -23,7 +23,7 @@ export default function HeroSection() {
               </button>
             </Link>
 
-            <button className="px-6 py-3 rounded-md text-gray-800 dark:border-white border border-black font-medium cursor-pointer transition-colors dark:text-white">
+            <button className="px-6 py-3 rounded-md text-gray-800 dark:border-white border bg-[#F5F5F5] font-medium cursor-pointer transition-colors dark:text-white">
               Partner with Us
             </button>
           </div>
