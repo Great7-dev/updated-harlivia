@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="relative bg-white dark:bg-gray-900 overflow-hidden">
       <div className="relative container mx-auto px-4 pt-16 pb-8 z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-[48px] font-bold mb-4 text-[#000000] dark:text-white">
+          <h2 className="text-[48px] font-medium mb-4 text-[#000000] dark:text-white">
             Let's Work Together!
           </h2>
           <p className="text-black dark:text-white mb-6 text-[18px]">
