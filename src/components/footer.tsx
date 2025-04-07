@@ -131,7 +131,7 @@ const Footer = () => {
               <div className="flex space-x-4">
                 {/* SVG Icons... */}
                 <a
-                  href="#"
+                  href="https://x.com/Harlivia_Ent?t=AG5a62YnT9ks2wWmUvoJog&s=08"
                   className="text-[#1A1A1A] dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   {" "}
@@ -175,7 +175,7 @@ const Footer = () => {
                   <span className="sr-only">LinkedIn</span>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/harlivia_enterprise?igsh=MW8zdXZpcGc4ajY2aQ=="
                   className="text-[#1A1A1A] dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   <svg
