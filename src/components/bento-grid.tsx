@@ -1,11 +1,7 @@
-// import frame2 from "../assets/Frame 6.png";
-// import frame4 from "../assets/Frame 11.png";
-// import frame5 from "../assets/image1.png";
-// import frame6 from "../assets/image2.png";
 import { Link } from "react-router-dom";
-import light from "../assets/energy.jpeg";
+import light from "../assets/light.jpeg";
 import cargo from "../assets/cargo.jpeg";
-import energy from "../assets/light.jpeg";
+import energy from "../assets/energy.jpeg";
 import agric from "../assets/agric.png";
 
 const BentoGrid = () => {
