@@ -10,7 +10,7 @@ export default function HeroSection() {
             Impact.
           </h1>
 
-          <p className="text-sm md:text-base text-[#767676] max-w-3xl dark:text-white font-neue">
+          <p className="text-sm md:text-base text-gray-700 max-w-3xl dark:text-white font-neue">
             From quality organic farm produce and luxury real estate to
             sustainable energy and seamless logistics, Harlivia’s mission is to
             transform industries and enrich everyday life experiences for
