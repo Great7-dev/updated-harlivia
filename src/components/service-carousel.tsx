@@ -34,11 +34,31 @@ export default function ServiceCarousel() {
   const [scrollLeft, setScrollLeft] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
 
+  const snapToOneCard = () => {
+    if (!carouselRef.current) return;
+
+    const cardWidth = carouselRef.current.offsetWidth / 2.5;
+    const scrollX = carouselRef.current.scrollLeft;
+    const currentIndex = activeIndex;
+    const currentScroll = currentIndex * cardWidth;
+
+    const diff = scrollX - currentScroll;
+
+    let newIndex = currentIndex;
+
+    if (Math.abs(diff) > cardWidth / 4) {
+      newIndex = diff > 0 ? currentIndex + 1 : currentIndex - 1;
+    }
+
+    newIndex = Math.max(0, Math.min(newIndex, services.length - 1));
+    setActiveIndex(newIndex);
+  };
+
   // Auto scroll functionality
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % services.length);
-    }, 5000);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -61,23 +81,12 @@ export default function ServiceCarousel() {
     setScrollLeft(carouselRef.current?.scrollLeft || 0);
   };
 
-  const handleMouseUp = () => {
-    setIsDragging(false);
-
-    // Snap to nearest card
-    if (carouselRef.current) {
-      const cardWidth = carouselRef.current.offsetWidth / 2.5;
-      const index = Math.round(carouselRef.current.scrollLeft / cardWidth);
-      setActiveIndex(Math.min(Math.max(index, 0), services.length - 1));
-    }
-  };
-
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging) return;
     e.preventDefault();
 
     const x = e.pageX - (carouselRef.current?.offsetLeft || 0);
-    const walk = (x - startX) * 2; // Scroll speed multiplier
+    const walk = x - startX;
 
     if (carouselRef.current) {
       carouselRef.current.scrollLeft = scrollLeft - walk;
@@ -94,22 +103,20 @@ export default function ServiceCarousel() {
     if (!isDragging) return;
 
     const x = e.touches[0].pageX - (carouselRef.current?.offsetLeft || 0);
-    const walk = (x - startX) * 2;
+    const walk = x - startX; // 🧠 natural scroll speed
 
     if (carouselRef.current) {
       carouselRef.current.scrollLeft = scrollLeft - walk;
     }
   };
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    snapToOneCard();
+  };
 
   const handleTouchEnd = () => {
     setIsDragging(false);
-
-    // Snap to nearest card
-    if (carouselRef.current) {
-      const cardWidth = carouselRef.current.offsetWidth / 2.5;
-      const index = Math.round(carouselRef.current.scrollLeft / cardWidth);
-      setActiveIndex(Math.min(Math.max(index, 0), services.length - 1));
-    }
+    snapToOneCard();
   };
 
   return (

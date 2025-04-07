@@ -11,8 +11,8 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-sm md:text-base text-[#767676] max-w-3xl dark:text-white font-neue">
-            From quality organic farm produce and luxury bed linens to
-            sustainable energy and seamless logistics, the Kora mission is to
+            From quality organic farm produce and luxury real estate to
+            sustainable energy and seamless logistics, Harlivia’s mission is to
             transform industries and enrich everyday life experiences for
             everyone across Africa and beyond.
           </p>

@@ -243,23 +243,18 @@ export default function Header() {
               {isDropdownOpen && (
                 <div>
                   {/* Properties Link */}
-                  <a
-                    href="#"
+                  <Link
+                    to="/properties"
                     className="block py-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
-                    {/* Changed items-center to items-start */}
                     <div className="flex items-start gap-3">
                       <span className="text-blue-600 dark:text-blue-400 pt-1">
-                        {" "}
-                        {/* Optional: Added pt-1 for slight adjustment if needed */}
-                        {/* Consider adding explicit size to img for consistency, e.g., className="w-6 h-6" */}
                         <img
                           src={prop || "/placeholder.svg"}
                           alt="Properties Icon"
                           className="w-6 h-6"
                         />
                       </span>
-
                       <div>
                         <div className="font-medium text-base text-gray-900 dark:text-gray-100">
                           Properties
@@ -270,19 +265,15 @@ export default function Header() {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
 
                   {/* Cargo & Logistics Link */}
-                  <a
-                    href="#"
+                  <Link
+                    to="/cargo"
                     className="block py-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
-                    {/* Changed items-center to items-start */}
                     <div className="flex items-start gap-3">
                       <span className="text-green-600 dark:text-green-400 pt-1">
-                        {" "}
-                        {/* Optional: Added pt-1 */}
-                        {/* Consider adding explicit size to img */}
                         <img
                           src={cargo || "/placeholder.svg"}
                           alt="Cargo & Logistics Icon"
@@ -299,19 +290,15 @@ export default function Header() {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
 
                   {/* Energy Link */}
-                  <a
-                    href="#"
+                  <Link
+                    to="/energy"
                     className="block py-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
-                    {/* Changed items-center to items-start */}
                     <div className="flex items-start gap-3">
                       <span className="text-amber-500 dark:text-amber-400 pt-1">
-                        {" "}
-                        {/* Optional: Added pt-1 */}
-                        {/* Consider adding explicit size to img */}
                         <img
                           src={energy || "/placeholder.svg"}
                           alt="Energy Icon"
@@ -328,25 +315,20 @@ export default function Header() {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
 
                   {/* Agric Link */}
-                  <a
-                    href="#"
+                  <Link
+                    to="/agric"
                     className="block py-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
-                    {/* Ensure this div still has items-start */}
                     <div className="flex items-start gap-3">
                       <span className="text-green-500 dark:text-green-400 pt-1">
-                        {" "}
-                        {/* Keep or adjust pt-1 */}
-                        {/* --- Add width and height classes here --- */}
                         <img
                           src={agric || "/placeholder.svg"}
                           alt="Agric Icon"
                           className="w-6 h-6"
                         />
-                        {/* --- Make sure to add the same w-6 h-6 (or chosen size) to the other images too! --- */}
                       </span>
                       <div>
                         <div className="font-medium text-base text-gray-900 dark:text-gray-100">
@@ -358,45 +340,45 @@ export default function Header() {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
 
             <a
-              href="/about"
+              href="#"
               className="block px-3 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
             >
               About us
             </a>
 
             <a
-              href="/blog"
+              href="#"
               className="block px-3 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
             >
               Blog
             </a>
 
             <a
-              href="/contact"
+              href="#"
               className="block px-3 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
             >
               Contact us
             </a>
 
             <a
-              href="/partner"
+              href="#"
               className="block px-3 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
             >
               Partner with Us
             </a>
 
-            <a
-              href="/explore"
+            <Link
+              to="/properties"
               className="block px-3 py-2 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md"
             >
               Explore Our Ecosystem
-            </a>
+            </Link>
           </div>
         </div>
       )}
