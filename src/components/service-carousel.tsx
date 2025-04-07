@@ -48,7 +48,7 @@ export default function ServiceCarousel() {
       <div className="container mx-auto px-4">
         <Slider {...settings}>
           {services.map((service) => (
-            <div key={service.id} className="px-2">
+            <div key={service.id} className="px-3">
               <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 rounded-lg overflow-hidden shadow-md">
                 <img
                   src={service.image || "/placeholder.svg"}
