@@ -5,18 +5,17 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat">
         <img src={hero} alt="Hero" className="w-full h-full object-cover" />
-        {/* Dark overlay for better text readability */}
-        {/* <div className="absolute inset-0 bg-black/20"></div> */}
+        <div className="absolute inset-0 dark:bg-black/60" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full max-w-3xl mx-auto px-4 text-center -translate-y-30">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-14">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-14 dark:text-[#F5F5F5]">
           <span className="block mb-2">Unstoppable Power That</span>
           <span className="block">Drives You Forward</span>
         </h1>
 
-        <p className="mt-6 text-base md:text-lg text-[#767676] max-w-2xl mx-auto">
+        <p className="mt-6 text-base md:text-lg text-[#767676] max-w-2xl mx-auto dark:text-white">
           Power is more than electricity. It’s the fuel that keeps businesses
           running, homes comfortable and happy, and industries thriving. At
           Harlivia Energy, we don’t just sell energy; we innovate solutions that

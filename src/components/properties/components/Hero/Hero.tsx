@@ -6,18 +6,17 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat">
         <img src={hero} alt="Hero" className="w-full h-full object-cover" />
-        {/* Dark overlay for better text readability */}
-        {/* <div className="absolute inset-0 bg-black/20"></div> */}
+        <div className="absolute inset-0 dark:bg-black/60" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full max-w-3xl mx-auto px-4 text-center -translate-y-30">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-14">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-14 dark:text-[#F5F5F5]">
           <span className="block mb-2">Redefining Luxury</span>
           <span className="block">One Home at a Time</span>
         </h1>
 
-        <p className="mt-6 text-base md:text-lg text-[#767676] max-w-2xl mx-auto">
+        <p className="mt-6 text-base md:text-lg text-[#767676] max-w-2xl mx-auto dark:text-white">
           We&apos;re builders, creators and visionaries who take an empty plot
           of land and turn it into something worth living in, worth investing
           in, and worth calling home.

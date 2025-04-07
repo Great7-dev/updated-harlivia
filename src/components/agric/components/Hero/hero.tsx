@@ -7,16 +7,18 @@ const Hero = () => {
       <div className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat">
         <img src={hero} alt="Hero" className="w-full h-full object-cover" />
         {/* Dark overlay for better text readability */}
-        {/* <div className="absolute inset-0 bg-black/20"></div> */}
+        <div className="absolute inset-0 dark:bg-black/60" />
       </div>
 
       {/* Content on top of the image */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-black z-10 px-4 mb-[25em]">
-        <h1 className="text-4xl font-bold mb-2">
+        <h1 className="text-4xl font-bold mb-2 dark:text-[#F5F5F5]">
           Delivering the Finest in Quality,
         </h1>
-        <h1 className="text-4xl font-bold mb-4">Flavour, and Satisfaction</h1>
-        <p className="text-lg mb-4">
+        <h1 className="text-4xl font-bold mb-4 dark:text-[#F5F5F5]">
+          Flavour, and Satisfaction
+        </h1>
+        <p className="text-lg mb-4 dark:text-white">
           Africa grows some of the richest, most flavorful produce, but it often
           goes unnoticed globally. <br />
           We're here to change that.

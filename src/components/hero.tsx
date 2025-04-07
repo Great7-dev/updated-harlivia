@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import EcosystemModal from "./ecosystemModal";
 
 export default function HeroSection() {
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className="w-full bg-white py-12 md:py-16 lg:py-20 dark:bg-black">
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
@@ -18,16 +20,21 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
-            <Link to="/properties">
-              <button className="px-6 py-3 rounded-md bg-[#335CFF] text-white font-medium hover:bg-[#335CFF]/90 transition-colors dark:text-white cursor-pointer w-full">
-                Explore Our Ecosystem
-              </button>
-            </Link>
+            <button
+              className="px-6 py-3 rounded-md bg-[#335CFF] whitespace-nowrap text-white font-medium hover:bg-[#335CFF]/90 transition-colors dark:text-white cursor-pointer w-full"
+              onClick={() => setShowModal(true)}
+            >
+              Explore Our Ecosystem
+            </button>
 
-            <button className="px-6 py-3 rounded-md text-gray-800 dark:border-white border bg-[#F5F5F5] font-medium cursor-pointer transition-colors dark:text-white dark:bg-black">
+            <button className="px-6 py-3 rounded-md text-gray-800 whitespace-nowrap dark:border-white border bg-[#F5F5F5] font-medium cursor-pointer transition-colors dark:text-white dark:bg-black">
               Partner with Us
             </button>
           </div>
+          <EcosystemModal
+            isOpen={showModal}
+            onClose={() => setShowModal(false)}
+          />
         </div>
       </div>
     </div>

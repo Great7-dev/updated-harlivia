@@ -6,19 +6,17 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat">
         <img src={hero} alt="Hero" className="w-full h-full object-cover" />
-
-        {/* Dark overlay for better text readability */}
-        {/* <div className="absolute inset-0 bg-black/20"></div> */}
+        <div className="absolute inset-0 dark:bg-black/60" />
       </div>
 
       {/* Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-black z-10 px-4 mb-[25em]">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-14">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-14 dark:text-[#F5F5F5]">
           <span className="block mb-2">Moving Your Goods with</span>
           <span className="block">Care and Precision</span>
         </h1>
 
-        <p className="mt-6 text-base md:text-lg text-[#767676] max-w-2xl mx-auto mb-6">
+        <p className="mt-6 text-base md:text-lg text-[#767676] max-w-2xl mx-auto mb-6 dark:text-white">
           When it comes to moving cargo, we don’t do guesswork, we make sure
           your shipments arrive on time, intact, and without unnecessary
           back-and-forth.

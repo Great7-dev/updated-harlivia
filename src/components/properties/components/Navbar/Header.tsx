@@ -199,6 +199,7 @@ export default function Header() {
             <Link
               to="/properties"
               className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             >
               Explore Our Ecosystem
             </Link>
@@ -372,13 +373,6 @@ export default function Header() {
             >
               Partner with Us
             </a>
-
-            <Link
-              to="/properties"
-              className="block px-3 py-2 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md"
-            >
-              Explore Our Ecosystem
-            </Link>
           </div>
         </div>
       )}
