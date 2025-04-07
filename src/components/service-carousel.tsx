@@ -14,8 +14,7 @@ const services = [
     id: 1,
     image: light,
     title: "Properties",
-    description:
-      "More than real estate, we create elevated living experiences.",
+    description: "We do more than just real estate,  We create elevated living experiences.",
     link: "/properties",
     titleColor: "bg-[#335CFF]", // blue
   },
@@ -23,8 +22,7 @@ const services = [
     id: 2,
     image: cargo,
     title: "Cargo & Logistics",
-    description:
-      "Seamless, efficient logistics solutions designed to keep you moving.",
+    description: "Our expertise ensures that your goods reach their destination safely and on time.",
     link: "/cargo",
     titleColor: "bg-[#B3E951]", // green
   },
@@ -33,7 +31,7 @@ const services = [
     image: energy,
     title: "Energy",
     description:
-      "Reliable energy solutions that drive progress for businesses and communities.",
+      "We meet energy needs of communities and industries today and in the future.",
     link: "/energy",
     titleColor: "bg-[#B3E951]", // green
   },
@@ -95,7 +93,7 @@ export default function ServiceCarousel() {
                     >
                       {service.title}
                     </span>
-                    <p className="text-white font-medium max-w-[80%] text-sm md:text-xl mt-6 lowercase">
+                    <p className="text-white font-medium max-w-[80%] text-sm md:text-xl mt-6">
                       {service.description}
                     </p>
                   </div>
