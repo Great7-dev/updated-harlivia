@@ -1,8 +1,11 @@
 import { useState } from "react";
 import EcosystemModal from "./ecosystemModal";
+import { PartnerDialog } from "./partner-dialog";
 
 export default function HeroSection() {
   const [showModal, setShowModal] = useState(false);
+  const [isPartnerDialogOpen, setIsPartnerDialogOpen] = useState(false);
+
   return (
     <div className="w-full bg-white py-12 md:py-16 lg:py-20 dark:bg-black">
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
@@ -27,13 +30,20 @@ export default function HeroSection() {
               Explore Our Ecosystem
             </button>
 
-            <button className="px-6 py-3 rounded-md text-gray-800 whitespace-nowrap dark:border-white border bg-[#F5F5F5] font-medium cursor-pointer transition-colors dark:text-white dark:bg-black">
+            <button
+              onClick={() => setIsPartnerDialogOpen(true)}
+              className="px-6 py-3 rounded-md text-gray-800 whitespace-nowrap dark:border-white border bg-[#F5F5F5] font-medium cursor-pointer transition-colors dark:text-white dark:bg-black"
+            >
               Partner with Us
             </button>
           </div>
           <EcosystemModal
             isOpen={showModal}
             onClose={() => setShowModal(false)}
+          />
+          <PartnerDialog
+            open={isPartnerDialogOpen}
+            onOpenChange={setIsPartnerDialogOpen}
           />
         </div>
       </div>

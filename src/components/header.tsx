@@ -9,14 +9,14 @@ import prop from "../assets/building-2-fill.svg";
 import agric from "../assets/Grain SVG Icon 1.svg";
 import energy from "../assets/sun.svg";
 import cargo from "../assets/log.svg";
-import { AboutDialog } from "./about-dialog";
 import { ContactDialog } from "./contact-dialog";
+import { PartnerDialog } from "./partner-dialog";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isAboutDialogOpen, setIsAboutDialogOpen] = useState(false)
-  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false)
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+  const [isPartnerDialogOpen, setIsPartnerDialogOpen] = useState(false);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -36,17 +36,15 @@ export default function Header() {
     };
   }, []);
 
-  const handleAboutClick = (e: React.MouseEvent) => {
-    e.preventDefault()
-    setIsAboutDialogOpen(true)
-  }
-
   const handleContactClick = (e: React.MouseEvent) => {
-    e.preventDefault()
-    setIsContactDialogOpen(true)
-  }
+    e.preventDefault();
+    setIsContactDialogOpen(true);
+  };
 
-
+  const handlePartnerClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsPartnerDialogOpen(true);
+  };
 
   return (
     <>
@@ -183,10 +181,7 @@ export default function Header() {
                 )}
               </div>
 
-              <a
-                className="text-gray-900 dark:text-gray-100 leading-[24px] text-sm font-medium cursor-pointer"
-                onClick={handleAboutClick}
-              >
+              <a className="text-gray-900 dark:text-gray-100 leading-[24px] text-sm font-medium cursor-pointer">
                 About us
               </a>
 
@@ -208,8 +203,8 @@ export default function Header() {
             {/* Right side buttons */}
             <div className="hidden md:flex items-center space-x-4 ml-auto">
               <a
-                href="/partner"
-                className="text-gray-900 dark:text-gray-100 leading-[24px] text-sm font-medium"
+                className="text-gray-900 dark:text-gray-100 leading-[24px] text-sm font-medium cursor-pointer"
+                onClick={handlePartnerClick}
               >
                 Partner with Us
               </a>
@@ -365,7 +360,7 @@ export default function Header() {
 
               <a
                 className="block px-3 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
-                onClick={handleAboutClick}
+                // onClick={handleAboutClick}
               >
                 About us
               </a>
@@ -385,7 +380,7 @@ export default function Header() {
               </a>
 
               <a
-                href="#"
+                onClick={handlePartnerClick}
                 className="block px-3 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
               >
                 Partner with Us
@@ -395,12 +390,15 @@ export default function Header() {
         )}
       </header>
 
-      <AboutDialog open={isAboutDialogOpen} onOpenChange={setIsAboutDialogOpen} />
+      <PartnerDialog
+        open={isPartnerDialogOpen}
+        onOpenChange={setIsPartnerDialogOpen}
+      />
 
-      <ContactDialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen} />
-
-
+      <ContactDialog
+        open={isContactDialogOpen}
+        onOpenChange={setIsContactDialogOpen}
+      />
     </>
-
   );
 }
