@@ -16,12 +16,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-// import image1 from "../assets/Frame 36880.png"
-// import image2 from "../assets/Frame 36881.png"
-// import image3 from "../assets/Frame 36882.png"
-// import image4 from "../assets/Frame 36883.png"
 import image5 from "../assets/Frame 36895.png";
-// import nigeria from "../assets/Nigeria.png";
 import { countryCodes } from "./lib/utils";
 
 interface ContactDialogProps {
@@ -29,17 +24,24 @@ interface ContactDialogProps {
   onOpenChange: (open: boolean) => void;
 }
 
-export function ContactDialog({ open, onOpenChange }: ContactDialogProps) {
+export function PartnerDialog({ open, onOpenChange }: ContactDialogProps) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
   const [countryCode, setCountryCode] = useState("+234");
+  const [areaOfInterest, setAreaOfInterest] = useState("");
+  const [additionalInfo, setAdditionalInfo] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log({ name, email, phone: `${countryCode} ${phone}`, message });
+    console.log({
+      name,
+      email,
+      phone: `${countryCode} ${phone}`,
+      areaOfInterest,
+      additionalInfo,
+    });
     onOpenChange(false);
   };
 
@@ -54,23 +56,22 @@ export function ContactDialog({ open, onOpenChange }: ContactDialogProps) {
     //       <div className="relative z-10 flex items-center justify-between px-6 py-4 h-full">
     //         <div className="flex flex-col items-center w-full">
     //           <h2 className="text-lg font-semibold text-center mt-8 dark:text-[#1A1A1A]">
-    //             Do you want to talk to us?
+    //             Join us on this amazing journey
     //           </h2>
     //           <p className="text-sm text-[#767676] text-center dark:text-[#1A1A1A] font-medium">
-    //             Speak to our seasoned customer relations team to get all your{" "}
-    //             <br /> questions answered.
+    //             Wether you are an individual or a business looking to partner{" "}
+    //             <br /> with us on what we are building, you are welcome.
     //           </p>
     //         </div>
     //         <button
     //           onClick={() => onOpenChange(false)}
-    //           className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+    //           className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 "
     //         >
-    //           <X className="h-4 w-4" />
+    //           <X className="h-4 w-4 cursor-pointer" />
     //           <span className="sr-only">Close</span>
     //         </button>
     //       </div>
     //     </div>
-
     //     <div className="px-6 py-4">
     //       <form onSubmit={handleSubmit} className="space-y-4">
     //         <div className="space-y-2">
@@ -125,14 +126,37 @@ export function ContactDialog({ open, onOpenChange }: ContactDialogProps) {
     //             />
     //           </div>
     //         </div>
+
     //         <div className="space-y-2">
-    //           <Label htmlFor="message">How can we help?</Label>
+    //           <Label htmlFor="areaOfInterest">Area of interest</Label>
+    //           <div className="relative">
+    //             <Select
+    //               value={areaOfInterest}
+    //               onValueChange={setAreaOfInterest}
+    //             >
+    //               <SelectTrigger className="w-full">
+    //                 <SelectValue placeholder="Where do you want to partner with us?" />
+    //               </SelectTrigger>
+    //               <SelectContent>
+    //                 <SelectItem value="properties">Properties</SelectItem>
+    //                 <SelectItem value="cargo">Cargo & Logistics</SelectItem>
+    //                 <SelectItem value="energy">Energy</SelectItem>
+    //                 <SelectItem value="agric">Agric</SelectItem>
+    //               </SelectContent>
+    //             </Select>
+    //           </div>
+    //         </div>
+
+    //         <div className="space-y-2">
+    //           <Label htmlFor="additionalInfo">
+    //             Additional information (Optional)
+    //           </Label>
     //           <Textarea
-    //             id="message"
-    //             placeholder="Tell us all the questions you have..."
+    //             id="additionalInfo"
+    //             placeholder="Do you have any additional information for us?"
     //             className="min-h-[100px]"
-    //             value={message}
-    //             onChange={(e) => setMessage(e.target.value)}
+    //             value={additionalInfo}
+    //             onChange={(e) => setAdditionalInfo(e.target.value)}
     //           />
     //         </div>
 
@@ -147,20 +171,20 @@ export function ContactDialog({ open, onOpenChange }: ContactDialogProps) {
     //   </DialogContent>
     // </Dialog>
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-[90vw] sm:max-w-[500px] p-0 overflow-hidden">
-        {/* Decorative header */}
-        <div className="relative h-24 bg-white/40 backdrop-blur-md">
+      <DialogContent className="w-full max-w-[90%] sm:max-w-[500px] p-0 overflow-hidden rounded-xl">
+        {/* Decorative Header */}
+        <div className="relative h-32 sm:h-24 bg-white/40 backdrop-blur-md">
           <div className="absolute inset-0 z-0 overflow-hidden dark:bg-white/70">
-            <img src={image5} alt="" className="object-cover w-full h-full" />
+            <img src={image5} alt="" className="w-full h-full object-cover" />
           </div>
-          <div className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 py-4 h-full text-center">
-            <h2 className="text-lg font-semibold mt-8 dark:text-[#1A1A1A]">
-              Do you want to talk to us?
+          <div className="relative z-10 flex flex-col items-center justify-center px-4 py-4 h-full text-center">
+            <h2 className="text-base sm:text-lg font-semibold dark:text-[#1A1A1A] mt-2">
+              Join us on this amazing journey
             </h2>
             <p className="text-sm text-[#767676] dark:text-[#1A1A1A] font-medium">
-              Speak to our seasoned customer relations team to get all your{" "}
+              Whether you are an individual or a business looking to partner
               <br className="hidden sm:block" />
-              questions answered.
+              with us on what we are building, you are welcome.
             </p>
             <button
               onClick={() => onOpenChange(false)}
@@ -172,9 +196,10 @@ export function ContactDialog({ open, onOpenChange }: ContactDialogProps) {
           </div>
         </div>
 
-        {/* Form section */}
-        <div className="px-4 sm:px-6 py-4 sm:py-6">
-          <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Form */}
+        <div className="px-4 py-6 sm:px-6">
+          <form onSubmit={handleSubmit} className="space-y-5">
+            {/* Name */}
             <div className="space-y-2">
               <Label htmlFor="name">Name</Label>
               <Input
@@ -186,6 +211,7 @@ export function ContactDialog({ open, onOpenChange }: ContactDialogProps) {
               />
             </div>
 
+            {/* Email */}
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input
@@ -198,6 +224,7 @@ export function ContactDialog({ open, onOpenChange }: ContactDialogProps) {
               />
             </div>
 
+            {/* Phone Number */}
             <div className="space-y-2">
               <Label htmlFor="phone">Phone number</Label>
               <div className="flex flex-col sm:flex-row gap-2">
@@ -228,17 +255,37 @@ export function ContactDialog({ open, onOpenChange }: ContactDialogProps) {
               </div>
             </div>
 
+            {/* Area of Interest */}
             <div className="space-y-2">
-              <Label htmlFor="message">How can we help?</Label>
+              <Label htmlFor="areaOfInterest">Area of interest</Label>
+              <Select value={areaOfInterest} onValueChange={setAreaOfInterest}>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Where do you want to partner with us?" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="properties">Properties</SelectItem>
+                  <SelectItem value="cargo">Cargo & Logistics</SelectItem>
+                  <SelectItem value="energy">Energy</SelectItem>
+                  <SelectItem value="agric">Agric</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            {/* Additional Info */}
+            <div className="space-y-2">
+              <Label htmlFor="additionalInfo">
+                Additional information (Optional)
+              </Label>
               <Textarea
-                id="message"
-                placeholder="Tell us all the questions you have..."
+                id="additionalInfo"
+                placeholder="Do you have any additional information for us?"
                 className="min-h-[100px]"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                value={additionalInfo}
+                onChange={(e) => setAdditionalInfo(e.target.value)}
               />
             </div>
 
+            {/* Submit */}
             <Button
               type="submit"
               className="w-full bg-[#335CFF] hover:bg-blue-700"

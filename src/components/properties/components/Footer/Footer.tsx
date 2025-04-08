@@ -1,11 +1,21 @@
+import { useState } from "react";
 import { Button } from "../../../../components/ui/button";
 import { Link } from "react-router-dom";
+import { Mail, Phone } from "lucide-react";
+import { ContactDialog } from "../../../contact-dialog";
 
 const Footer = () => {
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsContactDialogOpen(true);
+  };
+
   return (
     <footer className="relative bg-white dark:bg-gray-900 overflow-hidden">
       <div className="relative container mx-auto px-4 pt-16 pb-8 z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-[48px] font-medium mb-4 text-[#000000] dark:text-white">
             Let's Work Together!
           </h2>
@@ -14,7 +24,10 @@ const Footer = () => {
             produce, innovative energy solutions, or reliable cargo & logistics
             services, Harlivia is here to serve you.
           </p>
-          <Button className="bg-[#005FB8] hover:bg-blue-700 text-white px-8 dark:bg-blue-600 dark:hover:bg-blue-700 text-[18px]">
+          <Button
+            className="bg-[#005FB8] hover:bg-blue-700 text-white px-8 dark:bg-blue-600 dark:hover:bg-blue-700 text-[18px] cursor-pointer"
+            onClick={handleContactClick}
+          >
             Get in touch
           </Button>
         </div>
@@ -29,12 +42,10 @@ const Footer = () => {
             filter: "blur(150px)",
           }}
         />
-        {/* Call to Action Section */}
-        {/* Keep the container relative to ensure it sits above the absolute gradient div */}
-        <div className="relative container mx-auto px-4 pt-16 pb-8">
+
+        <div className="relative container mx-auto px-4 pt-5 pb-8">
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-4 border-t border-gray-300 dark:border-gray-800">
             {" "}
-            {/* Added light mode border color */}
             {/* Company Column */}
             <div>
               <h3 className="text-[16px] tracking-[0.06em] mb-4 text-sm text-[#1A1A1A] dark:text-gray-400">
@@ -51,8 +62,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
-                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
+                    className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
+                    onClick={handleContactClick}
                   >
                     Contact us
                   </a>
@@ -106,12 +117,12 @@ const Footer = () => {
               </h3>
               <ul className="space-y-3">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/policy"
                     className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -124,18 +135,30 @@ const Footer = () => {
               </ul>
             </div>
             {/* Stay Connected Column */}
-            <div>
+            <div className="space-y-3">
               <h3 className="text-[16px] tracking-[0.06em] mb-4 text-sm text-[#1A1A1A] dark:text-gray-400">
                 STAY CONNECTED
               </h3>
-              <div className="flex space-x-4">
-                {/* SVG Icons... */}
+
+              <div className="flex items-center flex-wrap gap-2">
+                <Mail className="mr-2" />
+                <h2 className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[16px] sm:text-[18px]">
+                  support@harlivia.com
+                </h2>
+              </div>
+
+              <div className="flex items-center flex-wrap gap-2">
+                <Phone className="mr-2" />
+                <h2 className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[16px] sm:text-[18px]">
+                  +234 9167664447
+                </h2>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-4 mt-2">
                 <a
                   href="https://x.com/Harlivia_Ent?t=AG5a62YnT9ks2wWmUvoJog&s=08"
                   className="text-[#1A1A1A] dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
                 >
-                  {" "}
-                  {/* Removed font-bold and text-[16px] from icon wrapper */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -152,8 +175,9 @@ const Footer = () => {
                   </svg>
                   <span className="sr-only">Twitter</span>
                 </a>
+
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/herlivia-enterprise/"
                   className="text-[#1A1A1A] dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   <svg
@@ -174,6 +198,7 @@ const Footer = () => {
                   </svg>
                   <span className="sr-only">LinkedIn</span>
                 </a>
+
                 <a
                   href="https://www.instagram.com/harlivia_enterprise?igsh=MW8zdXZpcGc4ajY2aQ=="
                   className="text-[#1A1A1A] dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
@@ -196,8 +221,9 @@ const Footer = () => {
                   </svg>
                   <span className="sr-only">Instagram</span>
                 </a>
+
                 <a
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=61575226792946"
                   className="text-[#1A1A1A] dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   <svg
@@ -221,6 +247,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <ContactDialog
+        open={isContactDialogOpen}
+        onOpenChange={setIsContactDialogOpen}
+      />
     </footer>
   );
 };
