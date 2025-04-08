@@ -1,5 +1,7 @@
+import { Mail, Phone } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Link } from "react-router-dom";
+
 
 const Footer = () => {
   return (
@@ -106,12 +108,12 @@ const Footer = () => {
               </h3>
               <ul className="space-y-3">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/policy"
                     className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -124,10 +126,18 @@ const Footer = () => {
               </ul>
             </div>
             {/* Stay Connected Column */}
-            <div>
+            <div className="space-y-3">
               <h3 className="text-[16px] tracking-[0.06em] mb-4 text-sm text-[#1A1A1A] dark:text-gray-400">
                 STAY CONNECTED
               </h3>
+              <div className="flex items-center">
+                <Mail className="mr-2" />
+                <h2>support@harlivia.com</h2>
+              </div>
+              <div className="flex items-center">
+                <Phone className="mr-2" />
+                <h2>+234 9167664447</h2>
+              </div>
               <div className="flex space-x-4">
                 {/* SVG Icons... */}
                 <a
