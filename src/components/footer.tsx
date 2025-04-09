@@ -125,12 +125,12 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/termofuse"
                     className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     Terms of Service
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
