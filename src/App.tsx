@@ -8,7 +8,7 @@ import LandingCargo from "./LandingpageCargo";
 import LandingProperties from "./LandingpageProperties";
 import LandingEnergy from "./LandingpageEnergy";
 import { PolicyPage } from "./PolicyPage";
-import TermOfUse from "./components/termOfUse";
+import { TermPage } from "./Term";
 
 function App() {
   const ScrollToTop = () => {
@@ -32,7 +32,7 @@ function App() {
           <Route path="/properties" element={<LandingProperties />} />
           <Route path="/energy" element={<LandingEnergy />} />
           <Route path="/policy" element={<PolicyPage />} />
-          <Route path="/termofuse" element={<TermOfUse />} />
+          <Route path="/terms" element={<TermPage />} />
         </Routes>
       </Router>
     </>
