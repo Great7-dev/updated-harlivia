@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Button } from "../../../../components/ui/button";
-import { Link } from "react-router-dom";
 import { Mail, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Button } from "../../../ui/button";
 import { ContactDialog } from "../../../contact-dialog";
 
 const Footer = () => {
@@ -125,12 +125,12 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/terms"
                     className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     Terms of Service
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

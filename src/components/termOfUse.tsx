@@ -1,447 +1,368 @@
 "use client";
 
 import * as React from "react";
-import { Separator } from "./ui/separator";
-
-const sections = [
-  "Introduction",
-  "Objective",
-  "Scope and Applicability",
-  "Ownership, Review and Approval",
-  "Interpretation",
-  "Policy",
-  "Consent",
-  "Use/Processing of Data Subject’s Data",
-  "Third-Party Disclosure",
-  "Data Confidentiality Rights",
-  "Cookies",
-  "Contact Us",
-];
+import { Separator } from "../components/ui/separator";
 
 const TermOfUse = () => {
-  const [activeSection, setActiveSection] = React.useState("Introduction");
+  const [activeTab, setActiveTab] = React.useState<string>("welcome");
 
-  const renderSectionContent = () => {
-    switch (activeSection) {
-      case "Introduction":
+  const handleTabClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    tab: string
+  ) => {
+    e.preventDefault();
+    setActiveTab(tab);
+  };
+
+  const tableOfContents = [
+    { id: "welcome", title: "Welcome", number: "" },
+    { id: "overview", title: "Overview of Services", number: 1 },
+    { id: "acceptance", title: "Acceptance of Terms", number: 2 },
+    { id: "eligibility", title: "Eligibility", number: 3 },
+    { id: "account", title: "Account Registration", number: 4 },
+    { id: "use", title: "Use of Services", number: 5 },
+    { id: "intellectual", title: "Intellectual Property Rights", number: 6 },
+    { id: "privacy", title: "Data Privacy and Security", number: 7 },
+    { id: "comment", title: "Use Comment", number: 8 },
+    { id: "disclaimer", title: "Disclaimer", number: 9 },
+    { id: "limitation", title: "Limitation of Liability", number: 10 },
+    { id: "indemnification", title: "Indemnification", number: 11 },
+    { id: "termination", title: "Termination and Suspension", number: 12 },
+    { id: "dispute", title: "Dispute Resolution", number: 13 },
+    { id: "governing", title: "Governing Law", number: 14 },
+    { id: "changes", title: "Changes to Terms", number: 15 },
+    { id: "contact", title: "Contact Us", number: 16 },
+  ];
+
+  const getContent = (id: string) => {
+    const item = tableOfContents.find((item) => item.id === id);
+
+    switch (id) {
+      case "welcome":
         return (
-          <>
-            <h2 className="text-xl font-semibold mb-4 dark:text-white">
-              Introduction
-            </h2>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              This Privacy Policy is developed by Harlivia Enterprises Ltd (the
-              Company) in compliance withthe Nigerian Data Protection Regulation
-              2023 and other similar regulations as well as demonstration of the
-              Company’s commitment to provide its customers and other
-              stakeholders with highest level of protection of their personal
-              data obtained in the course of interacting with the Company.
+          <section id="welcome" className="mb-10">
+            <p className="text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              Welcome to Harlivia Enterprises Ltd
             </p>
-          </>
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              Welcome to Harlivia Enterprises Ltd. ("Harlivia "we," "our," or
+              "us"). By accessing or using our website and services (the
+              "Services"), you ("you") agree to be bound by the following Terms
+              of use (the "Agreement"). The use of our website is subject to the
+              following terms of use. This Agreement are to be read together by
+              you with any terms, conditions or disclaimers provided in our
+              website. Please review the Terms carefully. The Agreement apply to
+              all users of our website, including without limitation, users who
+              are browsers, customers, merchants and vendors. If you do not
+              agree to the Terms of our privacy policy, you are not authorized
+              to access our website, use any of our website's service or place
+              an order on our website.
+            </p>
+          </section>
         );
-      case "Objective":
+      case "overview":
         return (
-          <>
+          <section id="overview" className="mb-10">
             <h2 className="text-xl font-semibold mb-4 dark:text-white">
-              Objective
+              {item?.number}. Overview of Services
             </h2>
-            <div className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              <p className="mb-2">
-                This Privacy Policy has been put in place to:
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              Harlivia Enterprises Ltd is a provider of a wide range of
+              services, including but not limited to: Buying, selling and
+              trading of goods, Oil and gas sector services, Transportation and
+              logistics, Real estate, Food processing and production. You agree
+              to use our services only for lawful purposes and in a manner that
+              does not infringe the rights of others.
+            </p>
+          </section>
+        );
+      case "acceptance":
+        return (
+          <section id="acceptance" className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 dark:text-white">
+              {item?.number}. Acceptance of Terms
+            </h2>
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              By using or accessing our Services, you agree to comply with and
+              be bound by these Terms of Use, our Privacy Policy, and any other
+              guidelines or policies referenced herein. If you do not agree to
+              these terms, you should not use our Services.
+            </p>
+          </section>
+        );
+      case "eligibility":
+        return (
+          <section id="eligibility" className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 dark:text-white">
+              {item?.number}. Eligibility
+            </h2>
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              To use our Services, you must be at least 18 years old or the
+              legal age of majority in your jurisdiction. You agree to provide
+              accurate, current, and complete information when using our
+              Services and to update your information if it changes.
+            </p>
+          </section>
+        );
+      case "account":
+        return (
+          <section id="account" className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 dark:text-white">
+              {item?.number}. Account Registration
+            </h2>
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              Some of our Services require you to create an account. By
+              registering, you agree to:
+            </p>
+            <ul className="list-disc pl-6 mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              <li>Provide accurate and complete information.</li>
+              <li>Maintain the confidentiality of your account credentials.</li>
+              <li>
+                Notify us immediately of any unauthorized use of your account.
+              </li>
+              <li>
+                Be fully responsible for all activities under your account.
+              </li>
+            </ul>
+          </section>
+        );
+      case "use":
+        return (
+          <section id="use" className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 dark:text-white">
+              {item?.number}. Use of Services
+            </h2>
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              You agree to use the Services only for lawful purposes and in
+              accordance with all applicable local, state, and international
+              laws, rules, and regulations. Specifically, you agree that you
+              will not:
+            </p>
+            <ul className="list-disc pl-6 mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              <li>
+                Use the Services for any fraudulent, illegal, or unauthorized
+                activities.
+              </li>
+              <li>
+                Violate or infringe upon the intellectual property rights or
+                privacy rights of any third party.
+              </li>
+              <li>
+                Transmit any harmful, disruptive, or malicious software or
+                viruses through the Services.
+              </li>
+              <li>
+                Engage in any activity that interferes with the proper
+                functioning of the Services..
+              </li>
+            </ul>
+          </section>
+        );
+      case "intellectual":
+        return (
+          <section id="intellectual" className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 dark:text-white">
+              {item?.number}. Intellectual Property Rights
+            </h2>
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              All content, designs, trademarks, software, and other intellectual
+              property associated with the Services are owned by Harlivia. or
+              our licensors. You may not reproduce, distribute, modify, or
+              create derivative works from our intellectual property without our
+              prior written consent.
+            </p>
+          </section>
+        );
+      case "privacy":
+        return (
+          <section id="privacy" className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 dark:text-white">
+              {item?.number}. Data Privacy and Security
+            </h2>
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              Your privacy is important to us. Please review our [Privacy
+              Policy] to understand how we collect, use, and protect your
+              personal data. By using our Services, you consent to the
+              collection and use of your data as outlined in the Privacy Policy.
+            </p>
+          </section>
+        );
+      case "comment":
+        return (
+          <section id="usecomment" className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 dark:text-white">
+              {item?.number}. Use Comment, Feedback and other Submission
+            </h2>
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              You acknowledge that you are responsible for the information,
+              profiles, opinions, messages, comments and any other content
+              (collectively, the “content”) that you post, distribute or share
+              on or through our website or services available in connection with
+              our website. You further acknowledge that you have full
+              responsibility for the content, including but not limited to, with
+              respect to its legality and its trademark, copyright and other
+              intellectual property ownership. You agree that any content
+              submitted by you in response to a request by us for a specific
+              submission may be edited, adapted, modified, recreated, published
+              or distributed by us. You further agree that we are under no
+              obligation to maintain any content in confidence, to pay
+              compensation for any content or to respond to any content. We
+              reserve the right to terminate your ability to post on our website
+              and/or delete any content that we deemed objectionable. You
+              consent to such removal and/or deletion and waive any claim
+              against us for the removal and/or deletion of your content.
+            </p>
+          </section>
+        );
+      case "disclaimer":
+        return (
+          <section id="disclaimer" className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 dark:text-white">
+              {item?.number}. Disclaimer
+            </h2>
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              You assume all responsibility and risk with respect to your use of
+              our website, which is provided “as is” without warranties,
+              representations or conditions of any kind, either express or
+              implied, with regard to information accessed from or via our
+              website, including without limitation, all content and materials,
+              and functions and services provided on our website, all of which
+              are provided without warranty of any kind, including but not
+              limited to warranties concerning the availability, accuracy,
+              completeness or usefulness of content or information,
+              uninterrupted access and any warranties of title,
+              non-infringement, merchantability or fitness for a particular
+              purpose. We do not warrant that our website or its functioning or
+              the content and material of the services made available thereby
+              will be timely, secure, uninterrupted or error-free, that defects
+              will be corrected, or that our websites or the servers that make
+              our website available are free of viruses or other harmful
+              components.
+            </p>
+          </section>
+        );
+      case "limitation":
+        return (
+          <section id="limitation" className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 dark:text-white">
+              {item?.number}. Limitation of Liability
+            </h2>
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              To the fullest extent permitted by applicable law, Harlivia will
+              not be liable for any indirect, incidental, special,
+              consequential, or punitive damages, including loss of profits,
+              data, or business, arising from the use of or inability to use our
+              Services. Our total liability for any claim arising out of or
+              related to these Terms shall be limited to the amount you have
+              paid for the Services in question.
+            </p>
+          </section>
+        );
+      case "indemnification":
+        return (
+          <section id="indemnification" className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 dark:text-white">
+              {item?.number}. Indemnification
+            </h2>
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              You agree to indemnify and hold harmless Harlivia, its director,
+              officers, employees, and affiliates from any and all claims,
+              liabilities, damages, and expenses (including legal fees) arising
+              out of your use of the Services, violation of these Terms, or
+              infringement of any third- party rights.
+            </p>
+          </section>
+        );
+      case "termination":
+        return (
+          <section id="termination" className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 dark:text-white">
+              {item?.number}. Termination and Suspension
+            </h2>
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              We may suspend or terminate your access to our Services at any
+              time, with or without cause, including if we suspect fraud,
+              violation of these Terms, or illegal activities. You may also
+              terminate your account by notifying us, subject to any outstanding
+              payments or obligations.
+            </p>
+          </section>
+        );
+      case "dispute":
+        return (
+          <section id="dispute" className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 dark:text-white">
+              {item?.number}. Dispute Resolution
+            </h2>
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              Any disputes arising out of or in connection with these Terms
+              shall be resolved through mediation in accordance with the rules
+              of the Lagos Multidoor Courthouse (LMDC). The mediation shall be
+              conducted in Lagos state, Nigeria, and the language of the
+              arbitration shall be English.
+            </p>
+          </section>
+        );
+      case "governing":
+        return (
+          <section id="governing" className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 dark:text-white">
+              {item?.number}. Governing Law
+            </h2>
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              These Terms of use shall be governed by and construed in
+              accordance with the laws of the Federal Republic of Nigeria. Any
+              disputes not subject to mediation shall be resolved in the courts
+              located in the Federal Republic of Nigeria.
+            </p>
+          </section>
+        );
+      case "changes":
+        return (
+          <section id="changes" className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 dark:text-white">
+              {item?.number}. Changes to Terms
+            </h2>
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              We reserve the right to modify or update these Terms of use at any
+              time. Any changes will be posted on our website, and the updated
+              Terms will be effective immediately upon posting. Your continued
+              use of the Services after any changes constitutes your acceptance
+              of the revised Terms.
+            </p>
+          </section>
+        );
+      case "contact":
+        return (
+          <section id="contact" className="mb-10">
+            <h2 className="text-xl font-semibold mb-4 dark:text-white">
+              {item?.number}. Contact Us
+            </h2>
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              If you have any questions or concerns about these Terms and
+              Conditions, please contact us at:
+              <p className="font-bold">Harlivia Enterprises Ltd.</p>
+              <p className="font-bold">
+                Address: S.95, Tafawa Balewa Square, Race Course, Onikan, Lagos,
+                Nigeria.
               </p>
-              <ul className="list-disc list-inside space-y-1">
-                <li>
-                  Inform data subjects about their rights, responsibilities, and
-                  privileges.
-                </li>
-                <li>
-                  Ensure the protection of Client and other Stakeholder’s
-                  information.
-                </li>
-                <li>Ensure confidentiality as much as possible.</li>
-                <li>Take corrective action if wrongdoing is discovered.</li>
-              </ul>
-            </div>
-          </>
-        );
-      case "Scope and Applicability":
-        return (
-          <>
-            <h2 className="text-xl font-semibold mb-4 dark:text-white">
-              2. Scope and Applicability
-            </h2>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              This Policy applies to all employees, clients and stakeholders of
-              the Company. This policy highlights the basis on which personal
-              data collected from Clients and other stakeholders shall be
-              processed by the Company. This policy applies to the Company’s
-              website and physical contact with the Company regardless of how
-              you access or use them. By continuing to visit our website, users
-              of the website accepts and consent to the practices described in
-              this policy.
+              <p className="font-bold">Email Address: support@Harlivia.com</p>
+              <p className="font-bold">Phone Number: +2349167664447</p>
             </p>
-          </>
-        );
-      // Repeat cases for other sections as needed
-      case "Ownership, Review and Approval":
-        return (
-          <>
-            <h2 className="text-xl font-semibold mb-4 dark:text-white">
-              3. Ownership, Review and Approval
-            </h2>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              The Head of Data Protection shall be responsible for the
-              development and maintenance of the data protection policy. The
-              policy shall be reviewed periodically in line with the provisions
-              of extant Data Protection laws. Final approval of this policy lies
-              with the Managing Director of the Company.
-            </p>
-          </>
-        );
-      case "Interpretation":
-        return (
-          <>
-            <h2 className="text-xl font-semibold mb-4 dark:text-white">
-              4. Interpretation
-            </h2>
-            <div className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              <ul className="list-[upper-roman] list-inside space-y-2">
-                <li>
-                  <strong>Personal Data:</strong> This means any information
-                  relating to an identified or identifiable natural persons
-                  (Data Subject); an identifiable natural person is one who can
-                  be identified, directly or indirectly.
-                </li>
-                <li>
-                  <strong>Data Subject:</strong> This refers to all person who
-                  can be identified, directly or indirectly, vianan identifier
-                  such as a name, an ID Number, Location data etc.
-                </li>
-                <li>
-                  <strong>Personally Identifiable Information (PII):</strong>{" "}
-                  This means information that can be used on its own or with
-                  other information to identify, contact or locate a single
-                  person, or to identify an individual In a context.
-                </li>
-                <li>
-                  <strong>Processing:</strong> This means any operation or set
-                  of operations which is performed on personal data or sets of
-                  personal data, whether or not by automated means, such as
-                  collection, recording, use, disclosure by transmission, etc
-                </li>
-              </ul>
-            </div>
-          </>
-        );
-      case "Policy":
-        return (
-          <>
-            <h2 className="text-xl font-semibold mb-4 dark:text-white">
-              4. Policy
-            </h2>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              This Privacy Policy describes your privacy rights with respect to
-              personal information which the Company may collect, use, store, or
-              otherwise process when you engage our services. It applies to the
-              Company’s website and all database, applications, services,
-              products, and physical contact with us, regardless of how you
-              access or use them.
-              <div className="list-decimal list-inside">
-                <li> Responsibility of Data Subject</li>
-                <li>
-                  {" "}
-                  Usernames, identification codes, passwords, or any other piece
-                  of information used as part of our access security measures
-                  must be treated as confidential and must not disclose to any
-                  third party.
-                </li>
-              </div>
-              We reserve the right to disable any user identification code or
-              password, whether chosen or <br /> allocated by the Company at any
-              time, if in the Company’s opinion, there has been non- <br />{" "}
-              compliance with any of the provisions of this privacy policy.{" "}
-              <br /> All enquires, complaints or suspicion of a data breach
-              should be forwarded to <br /> Hello@Harlivia.com
-            </p>
-          </>
-        );
-      case "Consent":
-        return (
-          <>
-            <h2 className="text-xl font-semibold mb-4 dark:text-white">
-              6. Consent
-            </h2>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              You accept this privacy policy when you give consent upon access
-              to the Company’s platforms, or use of the Company’s services,
-              features, technologies, or functions offered on our website, or
-              visit to our office for official or non-official purposes. The
-              Company may amend this privacy policy at any time by posting a
-              revised version on its website or placing such notice at
-              conspicuous points at its office.
-            </p>
-          </>
-        );
-      case "Use/Processing of Data Subject’s Data":
-        return (
-          <>
-            <h2 className="text-xl font-semibold mb-4 dark:text-white">
-              7. Use/Processing of Data Subject’s Data
-            </h2>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              During onboarding (electronically) and when you use our website,
-              we collect information such as website visits, identification
-              documents (driver’s license, BVN, NIN, Passport, etc), documents
-              reflecting personal information such as name, address, passport
-              details, identification numbers, telephone number, occupation, as
-              is necessary. In the course of carrying out our due diligence as
-              required by our Regulators, we may also use information obtained
-              from third parties such as friends, employers, regulators, and
-              publicly available sources such as the press, public search
-              engines, etc. <br /> The Company will only collect personal data
-              in other to give efficient, enjoyable, and secure services. We may
-              use your information to:
-              <div className="list-inside">
-                <li>provide necessary services and support</li>
-                <li>
-                  process applications and send notices about transactions to
-                  requisite parties
-                </li>
-                <li>verify your identity</li>
-                <li>
-                  manage risk, or detect, prevent, and/or remediate fraud or
-                  other potentially prohibitedor illegal activities
-                </li>
-                <li>
-                  Detect, prevent, or remediate violation of laws, regulations,
-                  standards, guidelines and frameworks
-                </li>
-                <li>
-                  {" "}
-                  improve the NITDA Services by implementing aggregate customer
-                  or user preferences
-                </li>
-                <li>
-                  measure the performance of the NITDA Services and improve the
-                  content, technolog . and layout
-                </li>
-                <li>
-                  track information breach and remediate such identified
-                  breaches
-                </li>
-                <li>
-                  manage and protect our information technology and physical
-                  infrastructure; or
-                </li>
-                <li>
-                  contact you at any time through your provided telephone
-                  number, email address or other contact details.
-                </li>
-              </div>
-            </p>
-          </>
-        );
-      case "Cookies":
-        return (
-          <>
-            <h2 className="text-xl font-semibold mb-4 dark:text-white">
-              Cookies
-            </h2>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              Cookies are small text files stored on your computer or mobile
-              devices whenever you visit website. Cookies have many uses, such
-              as memorizing your preferences to tailor your experiences while on
-              our site– or to help us analyze our website traffic. The Company
-              uses cookies to improve your experience while on its website. We
-              would like to let you know a few things about our cookies:
-              <div className="list-inside ">
-                <li>
-                  Some cookies are essential to access certain areas of this
-                  site;
-                </li>
-                <li>
-                  We use analytics cookies to help us understand how you use our
-                  site to discover what content is most useful to you
-                </li>
-              </div>
-            </p>
-            <h2 className="text-l font-semibold mt-8 dark:text-white">
-              Why and How We Use Cookies on Our Website
-            </h2>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              We use cookies to improve your online activity session by making
-              navigation easier and providing important security features.
-            </p>
-            <p className="mt-4 text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              When You access the Service by or through a mobile device, We may
-              collect certain information automatically, including, but not
-              limited to, the type of mobile device you use, Your mobile
-              device’s unique ID, the IP address of Your mobile device, Your
-              mobile operating system, the type of mobile Internet browser you
-              use, unique device identifiers and other diagnostic data. We may
-              also collect information that your browser sends whenever you
-              visit our Service or when you access the Service by or through a
-              mobile device. We use cookies to track the activity on Our Service
-              and store certain information
-            </p>
-            <p className="mt-4 text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              We use Google Analytics to collect the following types of
-              information from users who have <br /> JavaScript enabled on their
-              browsers: <br /> Web browser used – software manufacturer, and
-              version number
-              <div>
-                <li>Operating system</li>
-                <li>Screen colours</li>
-                <li>JavaScript support</li>
-                <li>Flash version</li>
-                <li>Screen resolution</li>
-                <li>Network location and IP address</li>
-                <li>Geographic data</li>
-                <li>Hostname</li>
-                <li>Connection bandwidth</li>
-                <li>Time of visit</li>
-                <li>Pages visited and dwell time on these pages </li>
-                <li>Referring site The referring website URL </li>
-                <li>Search engine query used</li>
-              </div>
-            </p>
-            <h2 className="text-l font-semibold mt-8 dark:text-white">
-              Cookie Category
-            </h2>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              Some cookies are required to make our website work, but we need
-              your consent to use others. <br /> The cookie categories are:
-            </p>
-            <h2 className="text-l font-semibold mt-4 dark:text-white">
-              Category Description
-            </h2>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              <div className="list-decimal list-inside">
-                <li>
-                  <strong>Strictly Necessary -</strong>These cookies are
-                  required to run our website, to keep it secure, and to obey
-                  regulations that apply to us. These cookies are essential even
-                  if a customer declines the collection of cookies.
-                </li>
-                <li>
-                  {" "}
-                  <strong>Functional</strong> These cookies remember your region
-                  or country, language, accessibility options, and your
-                  settings.
-                </li>
-                <li>
-                  {" "}
-                  <strong>Performance</strong> These cookies tell us how
-                  customers use our website. We study and profile this data to
-                  help us improve our products and performance
-                </li>
-                <li>
-                  {" "}
-                  <strong>Marketing</strong> These cookies help us decide which
-                  products, services, and offers may be relevant for you. We may
-                  use this data to tailor the ads you see on our own and other
-                  websites and apps.
-                </li>
-              </div>
-            </p>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium mt-8">
-              You can choose to have your computer warn you each time a cookie
-              is collected, or you can choose to turn off all cookies. Since
-              browsers differ, we recommend that you access the Help Menu to
-              learn the correct way to modify your cookies. e If you turn your
-              cookies off, some of the features that make your site, experience
-              more efficient may not function properly.
-            </p>
-          </>
-        );
-      case "Contact Us":
-        return (
-          <>
-            <h2 className="text-xl font-semibold mb-4 dark:text-white">
-              Contact Us
-            </h2>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              Should you have any question or concerns about this privacy
-              policy, please contact us at;
-            </p>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              Harlivia Enterprises Ltd
-            </p>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              Address: S. 95 Tafawa Balewa Square, Race Course, Onikan, Lagos,
-              Nigeria
-            </p>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              Email Address: support@Harlivia.com
-            </p>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              Phone Number: +2349167664447
-            </p>
-          </>
-        );
-      case "Third-Party Disclosure":
-        return (
-          <>
-            <h2 className="text-xl font-semibold mb-4 dark:text-white">
-              Third-Party Disclosure
-            </h2>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              As a policy, the Company does not share its Clients or other
-              stakeholder’s information with third parties (unless with prior
-              obtained approval of the data subject) except for website hosting
-              partners and other parties who assist us in operating our website,
-              conducting our business, or servicing you, so long as those
-              parties agree to 5 keep this information confidential. We may also
-              disclose the personal information of Data subjects under
-              Regulatory requirements. However, non-personally identifiable
-              visitor information may be provided to other parties in some
-              limited cases.
-            </p>
-          </>
-        );
-      case "Data Confidentiality Rights":
-        return (
-          <>
-            <h2 className="text-xl font-semibold mb-4 dark:text-white">
-              10. Data Confidentiality Rights
-            </h2>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              <div className="list-inside">
-                <li>
-                  Your information is regarded as confidential and will not be
-                  divulged to any third party,except under legal and/or
-                  regulatory conditions.
-                </li>
-                <li>
-                  You have the right to request sight of, and copies of any and
-                  all information we keep on you, if such requests are made in
-                  compliance with the Freedom of Information Act and other
-                  relevant enactments.
-                </li>
-                <li>
-                  You also have the right to request for the correction of
-                  information we keep on you.
-                </li>
-                <li>
-                  While the Company is responsible for safeguarding the
-                  information entrusted to us, youare also required to practice
-                  appropriate security measures such as non-sharing of password
-                  and other platform login details.
-                </li>
-              </div>
-            </p>
-          </>
+          </section>
         );
       default:
         return (
-          <>
+          <section id={id} className="mb-10">
             <h2 className="text-xl font-semibold mb-4 dark:text-white">
-              {activeSection}
+              {item?.number}. {item?.title}
             </h2>
-            <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
-              Content for {activeSection} goes here.
+            <p className="mb-4 text-[#333333] dark:text-gray-200 text-base leading-relaxed font-medium">
+              This section contains the terms related to{" "}
+              {item?.title.toLowerCase()}. The full content would be provided in
+              the complete Terms of Use document.
             </p>
-          </>
+          </section>
         );
     }
   };
@@ -449,28 +370,25 @@ const TermOfUse = () => {
   return (
     <div className="container mx-auto px-4 py-8 max-w-6xl">
       <div className="flex flex-col md:flex-row gap-8">
-        {/* Sidebar */}
+        {/* Table of Contents - Sidebar */}
         <aside className="w-full md:w-64 shrink-0 bg-[#F9F9F9] dark:bg-gray-700 p-4 md:py-2 h-full sticky top-8">
-          <div className="h-full overflow-y-auto">
-            <h2 className="text-sm font-semibold uppercase text-gray-500 dark:text-gray-400 mb-4 tracking-wide">
-              Table of Contents
+          <div className="sticky top-8">
+            <h2 className="text-sm font-bold uppercase text-gray-700 dark:text-gray-300 mb-4 tracking-wide">
+              TABLE OF CONTENT
             </h2>
-            <nav className="flex flex-col space-y-2">
-              {sections.map((section) => (
+            <nav className="flex flex-col space-y-1">
+              {tableOfContents.map((item) => (
                 <a
-                  key={section}
-                  href="#"
-                  className={`text-sm ${
-                    activeSection === section
+                  key={item.id}
+                  href={`#${item.id}`}
+                  className={`text-sm py-1 ${
+                    activeTab === item.id
                       ? "text-blue-600 dark:text-blue-400 font-medium underline whitespace-nowrap"
-                      : "text-gray-700 dark:text-gray-200"
+                      : "text-gray-700 dark:text-gray-300"
                   } hover:text-blue-600 dark:hover:text-blue-400 transition`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setActiveSection(section);
-                  }}
+                  onClick={(e) => handleTabClick(e, item.id)}
                 >
-                  {section}
+                  {item.title}
                 </a>
               ))}
             </nav>
@@ -481,14 +399,13 @@ const TermOfUse = () => {
         <main className="flex-1 h-full overflow-y-auto">
           <article className="prose prose-gray dark:prose-invert max-w-none">
             <h1 className="text-3xl font-semibold mb-2 dark:text-white">
-              Privacy Policy
+              Terms of Use
             </h1>
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
               Last updated: April 8th, 2025
             </p>
-            <Separator className="mb-6" />
-
-            <section className="mb-10">{renderSectionContent()}</section>
+            <Separator className="mb-3" />
+            {getContent(activeTab)}
           </article>
         </main>
       </div>
