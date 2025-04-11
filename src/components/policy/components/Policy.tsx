@@ -31,11 +31,12 @@ const Policy = () => {
             </h2>
             <p className="text-base text-[#333333] dark:text-gray-200 leading-relaxed font-medium">
               This Privacy Policy is developed by Harlivia Enterprises Ltd (the
-              Company) in compliance withthe Nigerian Data Protection Regulation
-              2023 and other similar regulations as well as demonstration of the
-              Company’s commitment to provide its customers and other
-              stakeholders with highest level of protection of their personal
-              data obtained in the course of interacting with the Company.
+              Company) in compliance with the Nigerian Data Protection
+              Regulation 2023 and other similar regulations as well as
+              demonstration of the Company’s commitment to provide its customers
+              and other stakeholders with the highest level of protection of
+              their personal data obtained in the course of interacting with the
+              Company.
             </p>
           </>
         );
@@ -447,52 +448,6 @@ const Policy = () => {
   };
 
   return (
-    // <div className="container mx-auto px-4 py-8 max-w-6xl">
-    //   <div className="flex flex-col md:flex-row gap-8">
-    //     {/* Sidebar */}
-    //     <aside className="w-full md:w-64 shrink-0 bg-[#F9F9F9] dark:bg-gray-700 p-4 md:py-2 h-100">
-    //       <div className="sticky top-8">
-    //         <h2 className="text-sm font-semibold uppercase text-gray-500 dark:text-gray-400 mb-4 tracking-wide">
-    //           Table of Contents
-    //         </h2>
-    //         <nav className="flex flex-col space-y-2">
-    //           {sections.map((section) => (
-    //             <a
-    //               key={section}
-    //               href="#"
-    //               className={`text-sm ${
-    //                 activeSection === section
-    //                   ? "text-blue-600 dark:text-blue-400 font-medium underline whitespace-nowrap"
-    //                   : "text-gray-700 dark:text-gray-200"
-    //               } hover:text-blue-600 dark:hover:text-blue-400 transition`}
-    //               onClick={(e) => {
-    //                 e.preventDefault();
-    //                 setActiveSection(section);
-    //               }}
-    //             >
-    //               {section}
-    //             </a>
-    //           ))}
-    //         </nav>
-    //       </div>
-    //     </aside>
-
-    //     {/* Main Content */}
-    //     <main className="flex-1">
-    //       <article className="prose prose-gray dark:prose-invert max-w-none">
-    //         <h1 className="text-3xl font-semibold mb-2 dark:text-white">
-    //           Privacy Policy
-    //         </h1>
-    //         <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
-    //           Last updated: April 8th, 2025
-    //         </p>
-    //         <Separator className="mb-6" />
-
-    //         <section className="mb-10">{renderSectionContent()}</section>
-    //       </article>
-    //     </main>
-    //   </div>
-    // </div>
     <div className="container mx-auto px-4 py-8 max-w-6xl">
       <div className="flex flex-col md:flex-row gap-8">
         {/* Sidebar */}

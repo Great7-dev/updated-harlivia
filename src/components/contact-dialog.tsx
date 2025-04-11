@@ -20,7 +20,7 @@ import {
 // import image2 from "../assets/Frame 36881.png"
 // import image3 from "../assets/Frame 36882.png"
 // import image4 from "../assets/Frame 36883.png"
-import image5 from "../assets/Frame 36895.png";
+// import image5 from "../assets/Frame 36895.png";
 // import nigeria from "../assets/Nigeria.png";
 import { countryCodes } from "./lib/utils";
 
@@ -150,14 +150,14 @@ export function ContactDialog({ open, onOpenChange }: ContactDialogProps) {
       <DialogContent className="max-w-[90vw] sm:max-w-[500px] p-0 overflow-hidden">
         {/* Decorative header */}
         <div className="relative h-24 bg-white/40 backdrop-blur-md">
-          <div className="absolute inset-0 z-0 overflow-hidden dark:bg-white/70">
+          {/* <div className="absolute inset-0 z-0 overflow-hidden dark:bg-black">
             <img src={image5} alt="" className="object-cover w-full h-full" />
-          </div>
+          </div> */}
           <div className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 py-4 h-full text-center">
-            <h2 className="text-lg font-semibold mt-8 dark:text-[#1A1A1A]">
+            <h2 className="text-lg font-semibold mt-8 dark:text-white">
               Do you want to talk to us?
             </h2>
-            <p className="text-sm text-[#767676] dark:text-[#1A1A1A] font-medium">
+            <p className="text-sm text-[#767676] dark:text-white font-medium">
               Speak to our seasoned customer relations team to get all your{" "}
               <br className="hidden sm:block" />
               questions answered.

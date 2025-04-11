@@ -16,7 +16,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-import image5 from "../assets/Frame 36895.png";
+// import image5 from "../assets/Frame 36895.png";
 import { countryCodes } from "./lib/utils";
 
 interface ContactDialogProps {
@@ -174,14 +174,14 @@ export function PartnerDialog({ open, onOpenChange }: ContactDialogProps) {
       <DialogContent className="w-full max-w-[90%] sm:max-w-[500px] p-0 overflow-hidden rounded-xl">
         {/* Decorative Header */}
         <div className="relative h-32 sm:h-24 bg-white/40 backdrop-blur-md">
-          <div className="absolute inset-0 z-0 overflow-hidden dark:bg-white/70">
+          {/* <div className="absolute inset-0 z-0 overflow-hidden dark:bg-white/70">
             <img src={image5} alt="" className="w-full h-full object-cover" />
-          </div>
+          </div> */}
           <div className="relative z-10 flex flex-col items-center justify-center px-4 py-4 h-full text-center">
-            <h2 className="text-base sm:text-lg font-semibold dark:text-[#1A1A1A] mt-2">
+            <h2 className="text-base sm:text-lg font-semibold dark:text-white mt-2">
               Join us on this amazing journey
             </h2>
-            <p className="text-sm text-[#767676] dark:text-[#1A1A1A] font-medium">
+            <p className="text-sm text-[#767676] dark:text-white font-medium">
               Whether you are an individual or a business looking to partner
               <br className="hidden sm:block" />
               with us on what we are building, you are welcome.

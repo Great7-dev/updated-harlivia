@@ -143,7 +143,7 @@ const Footer = () => {
               <div className="flex items-center flex-wrap gap-2">
                 <Mail className="mr-2" />
                 <h2 className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[16px] sm:text-[18px]">
-                  support@harlivia.com
+                  sales@harlivia.com
                 </h2>
               </div>
 
