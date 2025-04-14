@@ -53,12 +53,12 @@ const Footer = () => {
               </h3>
               <ul className="space-y-3">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/about"
                     className="text-[#1A1A1A] dark:text-gray-200 font-medium text-[18px] hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     About us
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -244,6 +244,9 @@ const Footer = () => {
                 </a>
               </div>
             </div>
+          </div>
+          <div className="flex mt-5 items-center justify-center">
+            <p className="text-[12px]">@ 2025 - Halivia Enterprises Ltd</p>
           </div>
         </div>
       </div>

@@ -44,120 +44,18 @@ export function ContactDialog({ open, onOpenChange }: ContactDialogProps) {
   };
 
   return (
-    // <Dialog open={open} onOpenChange={onOpenChange}>
-    //   <DialogContent className="sm:max-w-[500px] p-0 overflow-hidden">
-    //     {/* Decorative elements at the top */}
-    //     <div className="relative h-24 bg-white/40 backdrop-blur-md">
-    //       <div className="absolute inset-0 z-0 overflow-hidden dark:bg-white/70">
-    //         <img src={image5} alt="" />
-    //       </div>
-    //       <div className="relative z-10 flex items-center justify-between px-6 py-4 h-full">
-    //         <div className="flex flex-col items-center w-full">
-    //           <h2 className="text-lg font-semibold text-center mt-8 dark:text-[#1A1A1A]">
-    //             Do you want to talk to us?
-    //           </h2>
-    //           <p className="text-sm text-[#767676] text-center dark:text-[#1A1A1A] font-medium">
-    //             Speak to our seasoned customer relations team to get all your{" "}
-    //             <br /> questions answered.
-    //           </p>
-    //         </div>
-    //         <button
-    //           onClick={() => onOpenChange(false)}
-    //           className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-    //         >
-    //           <X className="h-4 w-4" />
-    //           <span className="sr-only">Close</span>
-    //         </button>
-    //       </div>
-    //     </div>
-
-    //     <div className="px-6 py-4">
-    //       <form onSubmit={handleSubmit} className="space-y-4">
-    //         <div className="space-y-2">
-    //           <Label htmlFor="name">Name</Label>
-    //           <Input
-    //             id="name"
-    //             placeholder="Let us know what to call you"
-    //             value={name}
-    //             onChange={(e) => setName(e.target.value)}
-    //             required
-    //           />
-    //         </div>
-
-    //         <div className="space-y-2">
-    //           <Label htmlFor="email">Email</Label>
-    //           <Input
-    //             id="email"
-    //             type="email"
-    //             placeholder="Fill your email"
-    //             value={email}
-    //             onChange={(e) => setEmail(e.target.value)}
-    //             required
-    //           />
-    //         </div>
-
-    //         <div className="space-y-2">
-    //           <Label htmlFor="phone">Phone number</Label>
-    //           <div className="flex gap-2">
-    //             <Select value={countryCode} onValueChange={setCountryCode}>
-    //               <SelectTrigger className="w-[100px]">
-    //                 <SelectValue placeholder="+234" />
-    //               </SelectTrigger>
-    //               <SelectContent>
-    //                 {countryCodes.map((country) => (
-    //                   <SelectItem key={country.code} value={country.code}>
-    //                     <span className="flex items-center gap-2">
-    //                       <span>{country.flag}</span>
-    //                       <span>{country.code}</span>
-    //                     </span>
-    //                   </SelectItem>
-    //                 ))}
-    //               </SelectContent>
-    //             </Select>
-
-    //             <Input
-    //               id="phone"
-    //               type="tel"
-    //               placeholder="1000-000-000"
-    //               value={phone}
-    //               onChange={(e) => setPhone(e.target.value)}
-    //               required
-    //             />
-    //           </div>
-    //         </div>
-    //         <div className="space-y-2">
-    //           <Label htmlFor="message">How can we help?</Label>
-    //           <Textarea
-    //             id="message"
-    //             placeholder="Tell us all the questions you have..."
-    //             className="min-h-[100px]"
-    //             value={message}
-    //             onChange={(e) => setMessage(e.target.value)}
-    //           />
-    //         </div>
-
-    //         <Button
-    //           type="submit"
-    //           className="w-full bg-[#335CFF] hover:bg-blue-700"
-    //         >
-    //           Submit
-    //         </Button>
-    //       </form>
-    //     </div>
-    //   </DialogContent>
-    // </Dialog>
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-[90vw] sm:max-w-[500px] p-0 overflow-hidden">
+      <DialogContent className="max-w-[90vw] sm:max-w-[500px] p-0 overflow-hidden bg-[#e8f0fe] dark:bg-black">
         {/* Decorative header */}
-        <div className="relative h-24 bg-white/40 backdrop-blur-md">
+        <div className="relative h-24 backdrop-blur-md bg-white/40 dark:bg-[#e8f0fe]">
           {/* <div className="absolute inset-0 z-0 overflow-hidden dark:bg-black">
             <img src={image5} alt="" className="object-cover w-full h-full" />
           </div> */}
           <div className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 py-4 h-full text-center">
-            <h2 className="text-lg font-semibold mt-8 dark:text-white">
+            <h2 className="text-lg font-semibold mt-8 dark:text-black">
               Do you want to talk to us?
             </h2>
-            <p className="text-sm text-[#767676] dark:text-white font-medium">
+            <p className="text-sm text-[#767676] dark:text-black font-medium">
               Speak to our seasoned customer relations team to get all your{" "}
               <br className="hidden sm:block" />
               questions answered.
