@@ -9,6 +9,7 @@ import LandingProperties from "./LandingpageProperties";
 import LandingEnergy from "./LandingpageEnergy";
 import { PolicyPage } from "./PolicyPage";
 import { TermPage } from "./Term";
+import { AboutPage } from "./aboutPage";
 
 function App() {
   const ScrollToTop = () => {
@@ -33,6 +34,7 @@ function App() {
           <Route path="/energy" element={<LandingEnergy />} />
           <Route path="/policy" element={<PolicyPage />} />
           <Route path="/terms" element={<TermPage />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
       </Router>
     </>
