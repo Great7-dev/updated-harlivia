@@ -38,7 +38,6 @@ function App() {
           <Route path="/terms" element={<TermPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/blog" element={<Blogmain />} />
-          <Route path="/blog" element={<Blogmain />} />
         </Routes>
       </Router>
     </>
