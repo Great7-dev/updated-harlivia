@@ -7,6 +7,7 @@ import LandingAgric from "./LandingpageAgric";
 import LandingCargo from "./LandingpageCargo";
 import LandingProperties from "./LandingpageProperties";
 import LandingEnergy from "./LandingpageEnergy";
+import Blogmain from "./components/blog/blogmain";
 
 function App() {
   const ScrollToTop = () => {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/cargo" element={<LandingCargo />} />
           <Route path="/properties" element={<LandingProperties />} />
           <Route path="/energy" element={<LandingEnergy />} />
+          <Route path="/blog" element={<Blogmain />} />
         </Routes>
       </Router>
     </>

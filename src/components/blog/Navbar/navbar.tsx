@@ -2,13 +2,13 @@
 
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
-import logo from "../assets/logo.png";
-import { ModeToggle } from "./lib/mode-toggle";
+import logo from "../../assets/logo.png";
+import { ModeToggle } from "../../../lib/mode-toggle";
 import { Link } from "react-router-dom";
-import prop from "../assets/building-2-fill.svg";
-import agric from "../assets/Grain SVG Icon 1.svg";
-import energy from "../assets/sun.svg";
-import cargo from "../assets/log.svg";
+import prop from "../../../../assets/building-2-fill.svg";
+import agric from "../../../../assets/Grain SVG Icon 1.svg";
+import energy from "../../../../assets/sun.svg";
+import cargo from "../../../../assets/log.svg";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -172,12 +172,12 @@ export default function Header() {
               About us
             </a>
 
-            <Link
-              to="/blog"
+            <a
+              href="/blog"
               className="text-gray-900 dark:text-gray-100 leading-[24px] text-sm font-medium"
             >
               Blog
-            </Link>
+            </a>
 
             <a
               href="/contact"
@@ -370,12 +370,12 @@ export default function Header() {
               About us
             </a>
 
-            <Link
-              to="/blog"
+            <a
+              href="/blog"
               className="block px-3 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
             >
               Blog
-            </Link>
+            </a>
 
             <a
               href="/contact"
