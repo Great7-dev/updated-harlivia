@@ -69,7 +69,7 @@ export default function Header() {
                   className="flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 cursor-pointer"
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 >
-                  What we offer{" "}
+                  What We Offer{" "}
                   <ChevronDown className="ml-1 h-4 w-4 leading-[24px]" />
                 </button>
 
@@ -185,7 +185,7 @@ export default function Header() {
                 to="/about"
                 className="text-gray-900 dark:text-gray-100 leading-[24px] text-sm font-medium cursor-pointer"
               >
-                About us
+                About Us
               </Link>
 
               <a
@@ -199,7 +199,7 @@ export default function Header() {
                 className="text-gray-900 dark:text-gray-100 leading-[24px] text-sm font-medium cursor-pointer"
                 onClick={handleContactClick}
               >
-                Contact us
+                Contact Us
               </a>
             </nav>
 
@@ -209,7 +209,7 @@ export default function Header() {
                 className="text-gray-900 dark:text-gray-100 leading-[24px] text-sm font-medium cursor-pointer"
                 onClick={handlePartnerClick}
               >
-                Partner with Us
+                Partner With Us
               </a>
 
               <a
@@ -365,7 +365,7 @@ export default function Header() {
                 to="/about"
                 className="block px-3 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
               >
-                About us
+                About Us
               </Link>
 
               <a
@@ -379,14 +379,14 @@ export default function Header() {
                 className="block px-3 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
                 onClick={handleContactClick}
               >
-                Contact us
+                Contact Us
               </a>
 
               <a
                 onClick={handlePartnerClick}
                 className="block px-3 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
               >
-                Partner with Us
+                Partner With Us
               </a>
             </div>
           </div>
