@@ -11,7 +11,7 @@ import { PolicyPage } from "./PolicyPage";
 import { TermPage } from "./Term";
 import { AboutPage } from "./aboutPage";
 import Blogmain from "./components/blog/blogmain";
-import Blogmain from "./components/blog/blogmain";
+
 
 function App() {
   const ScrollToTop = () => {
