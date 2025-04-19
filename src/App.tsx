@@ -10,6 +10,8 @@ import LandingEnergy from "./LandingpageEnergy";
 import { PolicyPage } from "./PolicyPage";
 import { TermPage } from "./Term";
 import { AboutPage } from "./aboutPage";
+import Blogmain from "./components/blog/blogmain";
+
 
 function App() {
   const ScrollToTop = () => {
@@ -35,6 +37,7 @@ function App() {
           <Route path="/policy" element={<PolicyPage />} />
           <Route path="/terms" element={<TermPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/blog" element={<Blogmain />} />
         </Routes>
       </Router>
     </>

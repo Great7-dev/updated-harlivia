@@ -188,12 +188,12 @@ export default function Header() {
                 About us
               </Link>
 
-              <a
-                href="/blog"
+              <Link
+                to="/blog"
                 className="text-gray-900 dark:text-gray-100 leading-[24px] text-sm font-medium"
               >
                 Blog
-              </a>
+              </Link>
 
               <a
                 className="text-gray-900 dark:text-gray-100 leading-[24px] text-sm font-medium cursor-pointer"
@@ -364,17 +364,17 @@ export default function Header() {
               <Link
                 to="/about"
                 className="block px-3 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
-                // onClick={handleAboutClick}
+              // onClick={handleAboutClick}
               >
                 About us
               </Link>
 
-              <a
-                href="#"
+              <Link
+                to="/blog"
                 className="block px-3 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
               >
                 Blog
-              </a>
+              </Link>
 
               <a
                 className="block px-3 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
