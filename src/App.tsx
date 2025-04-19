@@ -11,7 +11,7 @@ import { PolicyPage } from "./PolicyPage";
 import { TermPage } from "./Term";
 import { AboutPage } from "./aboutPage";
 import Blogmain from "./components/blog/blogmain";
-
+import BlogDetailsPage from "./components/blog/blogDetailsPage";
 
 function App() {
   const ScrollToTop = () => {
@@ -38,6 +38,7 @@ function App() {
           <Route path="/terms" element={<TermPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/blog" element={<Blogmain />} />
+          <Route path="/blog/:slug" element={<BlogDetailsPage />} />
         </Routes>
       </Router>
     </>
