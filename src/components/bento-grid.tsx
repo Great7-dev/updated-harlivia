@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import light from "../assets/light.jpeg";
 import cargo from "../assets/cargo.jpeg";

@@ -1,13 +1,13 @@
 "use client";
-import React from "react"
+
 import Slider from "react-slick";
 import { Link } from "react-router-dom"; // Assuming you're using React Router for navigation
 import light from "../assets/light.jpeg";
 import cargo from "../assets/cargo.jpeg";
 import energy from "../assets/energy.jpeg";
 import agric from "../assets/agric.png";
-import "../assets/slick/slick.css"
-import "../assets/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const services = [
   {
@@ -47,7 +47,7 @@ const services = [
 
 export default function ServiceCarousel() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 800,
     autoplay: true,

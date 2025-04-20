@@ -1,4 +1,3 @@
-import React from "react";
 import badge from "../assets/badge.svg";
 import Thumb from "../assets/Thumb.svg";
 import bulb from "../assets/bulb.svg";

@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import EcosystemModal from "./ecosystemModal";
 import { PartnerDialog } from "./partner-dialog";
@@ -10,7 +9,7 @@ export default function HeroSection() {
   return (
     <div className="w-full bg-white py-12 md:py-16 lg:py-20 dark:bg-black">
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-        <div className="flex flex-col items-center text-center space-y-6">
+        <div className="flex flex-col items-center text-center">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black leading-tight dark:text-white font-neue">
             Building Better Lives Through <br /> Innovation, Excellence, and
             Impact.
