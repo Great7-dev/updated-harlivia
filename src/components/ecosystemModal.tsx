@@ -20,7 +20,7 @@ export default function EcosystemModal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/60 bg-opacity-50 flex items-center justify-center px-4">
+    <div className="fixed inset-0 z-50 bg-black/60 bg-opacity-50 flex items-center justify-center p-0">
       <div className="bg-white dark:bg-gray-900 rounded-lg shadow-xl w-full max-w-3xl max-h-[90vh] overflow-y-auto p-6 text-left">
         <div className="p-6">
           <div className="flex justify-between items-center mb-4">
@@ -35,7 +35,6 @@ export default function EcosystemModal({
             </button>
           </div>
 
-          {/* Ecosystem Links */}
           <div className="flex flex-col gap-6">
             <div className="space-y-4">
               <Link

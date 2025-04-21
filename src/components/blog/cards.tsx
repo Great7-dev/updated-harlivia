@@ -1,4 +1,3 @@
-// Define the Card interface
 export interface Card {
   date: string;
   category: string;
