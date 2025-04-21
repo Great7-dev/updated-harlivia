@@ -1,6 +1,6 @@
 const Began = () => {
   return (
-    <div className="dark:bg-black px-4 md:px-0 py-[56px]">
+    <div className="dark:bg-black px-4 md:px-[100px] py-[56px]">
       <div className="flex flex-col md:flex-row items-start gap-6 md:gap-90 max-w-[1480px] mx-auto">
         {/* Badge on the left */}
         <button className="inline-flex whitespace-nowrap items-center px-4 py-2 bg-[#F5F5F5]  border border-[#E8E8E8] text-[18px] leading-[24px] font-medium rounded-md text-[#333333] transition-colors dark:text-white dark:border-white/20 hover:bg-[#F5F7FA] dark:hover:bg-black dark:bg-black">

@@ -14,7 +14,7 @@ const WhatWeOffer = () => {
             <span className="w-2 h-2 bg-[#B4EE4C] rounded-full mr-2"></span>
             What we have to offer
           </button>
-          <p className="mt-4 text-[24px] text-gray-800 dark:text-gray-200 max-w-4xl mx-auto text-sm">
+          <p className="mt-4 text-[24px] text-gray-800 dark:text-gray-200 max-w-4xl mx-auto">
             Today, Harlivia is a growing ecosystem of ventures designed to meet
             real needs in <br /> the world
           </p>
