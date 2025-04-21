@@ -47,7 +47,7 @@ const services = [
 
 export default function ServiceCarousel() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 800,
     autoplay: true,

@@ -68,7 +68,7 @@ export default function Header() {
                   className="flex items-center text-sm font-medium text-gray-900 dark:text-gray-100 cursor-pointer"
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 >
-                  What We Offer{" "}
+                  What we offer{" "}
                   <ChevronDown className="ml-1 h-4 w-4 leading-[24px]" />
                 </button>
 
@@ -184,7 +184,7 @@ export default function Header() {
                 to="/about"
                 className="text-gray-900 dark:text-gray-100 leading-[24px] text-sm font-medium cursor-pointer"
               >
-                About Us
+                About us
               </Link>
 
               <Link
@@ -198,7 +198,7 @@ export default function Header() {
                 className="text-gray-900 dark:text-gray-100 leading-[24px] text-sm font-medium cursor-pointer"
                 onClick={handleContactClick}
               >
-                Contact Us
+                Contact us
               </a>
             </nav>
 
@@ -208,7 +208,7 @@ export default function Header() {
                 className="text-gray-900 dark:text-gray-100 leading-[24px] text-sm font-medium cursor-pointer"
                 onClick={handlePartnerClick}
               >
-                Partner With Us
+                Partner with Us
               </a>
 
               <a
@@ -250,7 +250,7 @@ export default function Header() {
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 >
                   <div className="flex items-center justify-between">
-                    What We Offer
+                    What we offer
                     <ChevronDown className="ml-1 h-4 w-4" />
                   </div>
                 </button>
@@ -364,11 +364,11 @@ export default function Header() {
                 to="/about"
                 className="block px-3 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
               >
-                About Us
+                About us
               </Link>
 
               <Link
-                 to="/blog"
+                to="/blog"
                 className="block px-3 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
               >
                 Blog
@@ -378,14 +378,14 @@ export default function Header() {
                 className="block px-3 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
                 onClick={handleContactClick}
               >
-                Contact Us
+                Contact us
               </a>
 
               <a
                 onClick={handlePartnerClick}
                 className="block px-3 py-2 text-base font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700"
               >
-                Partner With Us
+                Partner with Us
               </a>
             </div>
           </div>

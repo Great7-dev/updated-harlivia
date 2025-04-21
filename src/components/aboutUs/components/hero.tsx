@@ -9,7 +9,7 @@ const Hero = () => {
         <img
           src={image}
           alt="image"
-          className="w-full object-cover max-h-[250px] sm:max-h-[350px] md:max-h-[400px] lg:max-h-[500px] dark:brightness-0 "
+          className="w-full object-cover max-h-[250px] sm:max-h-[350px] md:max-h-[400px] lg:max-h-[500px]"
         />
         {/* Gradient overlay at the bottom */}
         <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-t from-white dark:from-black to-transparent" />

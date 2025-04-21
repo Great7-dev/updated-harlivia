@@ -1,17 +1,15 @@
 /** @format */
 
-#root {
-  margin: 0;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import "tailwindcss";
-
-@plugin "tailwindcss-animate";
+/*---break--- */
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
-  --font-sans: "Neue Haas Display";
+body {
+  margin: 0;
 }
 
 /* Neue Haas Display Font Family */
@@ -159,6 +157,8 @@
   font-display: swap;
 }
 
+/*---break--- */
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -270,11 +270,7 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
   body {
-    @apply bg-background text-foreground;
-    @apply m-0;
+    @apply bg-background text-foreground font-neue;
   }
 }
